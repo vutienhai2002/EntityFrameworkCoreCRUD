@@ -1,0 +1,136 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2em;
+    background-color: #171717;
+    border-radius: 25px;
+    transition: 0.4s ease-in-out;
+    max-width: 400px;
+    margin: auto;
+}
+
+.card {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 22px;
+    transition: all 0.3s;
+    padding: 2em;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card2 {
+    border-radius: 22px;
+    transition: all 0.2s;
+}
+
+    .card2:hover {
+        transform: scale(0.98);
+        border-radius: 20px;
+    }
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+
+#heading {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 10px;
+    padding: 0.8em;
+    background-color: #3d3d3d;
+}
+
+.input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #ffffff;
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+    font-size: 1em;
+}
+
+.form .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.button1 {
+    padding: 0.7em 2em;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    background-color: #ff7f50;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+    .button1:hover {
+        background-color: #ff6347;
+    }
+
+.button3 {
+    margin-top: 1em;
+    padding: 0.7em 2em;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    background-color: #252525;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+    .button3:hover {
+        background-color: #1a1a1a;
+    }
+
+.signin {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 1em;
+}
+
+    .signin a {
+        color: #ff7f50;
+        text-decoration: none;
+    }
+
+        .signin a:hover {
+            color: #ff6347;
+        }
+
+.error {
+    color: #ff6347;
+    text-align: center;
+    margin-top: 1em;
+}

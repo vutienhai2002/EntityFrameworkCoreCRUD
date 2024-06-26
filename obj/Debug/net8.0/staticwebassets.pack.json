@@ -1,0 +1,669 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\about-pic.jpg",
+      "PackagePath": "staticwebassets\\Image\\about\\about-pic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\af-1.png",
+      "PackagePath": "staticwebassets\\Image\\about\\af-1.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\af-2.png",
+      "PackagePath": "staticwebassets\\Image\\about\\af-2.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\af-3.png",
+      "PackagePath": "staticwebassets\\Image\\about\\af-3.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\call-bg.jpg",
+      "PackagePath": "staticwebassets\\Image\\about\\call-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\team-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\about\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\team-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\about\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\team-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\about\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\about\\team-4.jpg",
+      "PackagePath": "staticwebassets\\Image\\about\\team-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\details\\author.png",
+      "PackagePath": "staticwebassets\\Image\\blog\\details\\author.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\details\\comment-1.png",
+      "PackagePath": "staticwebassets\\Image\\blog\\details\\comment-1.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\details\\comment-2.png",
+      "PackagePath": "staticwebassets\\Image\\blog\\details\\comment-2.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\details\\details-hero-avatar.png",
+      "PackagePath": "staticwebassets\\Image\\blog\\details\\details-hero-avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\details\\details-hero-bg.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\details\\details-hero-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\details\\details-pic.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\details\\details-pic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\details\\next.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\details\\next.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\blog\\details\\pre.jpg",
+      "PackagePath": "staticwebassets\\Image\\blog\\details\\pre.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\breadcrumb-bg.jpg",
+      "PackagePath": "staticwebassets\\Image\\breadcrumb-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\car-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\car-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\car-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\car-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\car-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\car-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\car-4.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\car-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\car-5.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\car-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\car-6.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\car-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\car-7.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\car-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\car-8.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\car-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-4.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-5.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-6.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\sm-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\sm-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\sm-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\sm-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\sm-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\sm-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\sm-4.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\sm-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\sm-5.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\sm-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\chooseus-video.png",
+      "PackagePath": "staticwebassets\\Image\\chooseus-video.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\clients\\client-1.png",
+      "PackagePath": "staticwebassets\\Image\\clients\\client-1.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\clients\\client-2.png",
+      "PackagePath": "staticwebassets\\Image\\clients\\client-2.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\clients\\client-3.png",
+      "PackagePath": "staticwebassets\\Image\\clients\\client-3.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\clients\\client-4.png",
+      "PackagePath": "staticwebassets\\Image\\clients\\client-4.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\clients\\client-5.png",
+      "PackagePath": "staticwebassets\\Image\\clients\\client-5.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\clients\\client-6.png",
+      "PackagePath": "staticwebassets\\Image\\clients\\client-6.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\clients\\client-7.png",
+      "PackagePath": "staticwebassets\\Image\\clients\\client-7.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\counter-bg.jpg",
+      "PackagePath": "staticwebassets\\Image\\counter-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cta\\cta-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\cta\\cta-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cta\\cta-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\cta\\cta-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\feature\\car.png",
+      "PackagePath": "staticwebassets\\Image\\feature\\car.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\feature\\feature-1.png",
+      "PackagePath": "staticwebassets\\Image\\feature\\feature-1.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\feature\\feature-2.png",
+      "PackagePath": "staticwebassets\\Image\\feature\\feature-2.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\feature\\feature-3.png",
+      "PackagePath": "staticwebassets\\Image\\feature\\feature-3.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\feature\\feature-4.png",
+      "PackagePath": "staticwebassets\\Image\\feature\\feature-4.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\feature\\feature-5.png",
+      "PackagePath": "staticwebassets\\Image\\feature\\feature-5.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\feature\\feature-6.png",
+      "PackagePath": "staticwebassets\\Image\\feature\\feature-6.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\footer-bg.jpg",
+      "PackagePath": "staticwebassets\\Image\\footer-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\footer-logo.png",
+      "PackagePath": "staticwebassets\\Image\\footer-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\Image\\hero-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\latest-blog\\lb-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\latest-blog\\lb-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\latest-blog\\lb-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\latest-blog\\lb-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\latest-blog\\lb-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\latest-blog\\lb-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\logo.png",
+      "PackagePath": "staticwebassets\\Image\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\services\\services-1.png",
+      "PackagePath": "staticwebassets\\Image\\services\\services-1.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\services\\services-2.png",
+      "PackagePath": "staticwebassets\\Image\\services\\services-2.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\services\\services-3.png",
+      "PackagePath": "staticwebassets\\Image\\services\\services-3.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\services\\services-4.png",
+      "PackagePath": "staticwebassets\\Image\\services\\services-4.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\testimonial\\testimonial-1.png",
+      "PackagePath": "staticwebassets\\Image\\testimonial\\testimonial-1.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\testimonial\\testimonial-2.png",
+      "PackagePath": "staticwebassets\\Image\\testimonial\\testimonial-2.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\wheel.png",
+      "PackagePath": "staticwebassets\\Image\\wheel.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Nen.avif",
+      "PackagePath": "staticwebassets\\Nen.avif"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\Demo.css",
+      "PackagePath": "staticwebassets\\css\\Demo.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\SignUpp.css",
+      "PackagePath": "staticwebassets\\css\\SignUpp.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\bootstrap.minn.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.minn.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\elegant-icons.css",
+      "PackagePath": "staticwebassets\\css\\elegant-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\paper-dashboard.css",
+      "PackagePath": "staticwebassets\\css\\paper-dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\paper-dashboard.css.map",
+      "PackagePath": "staticwebassets\\css\\paper-dashboard.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\paper-dashboard.min.css",
+      "PackagePath": "staticwebassets\\css\\paper-dashboard.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\jquery.slicknav.js",
+      "PackagePath": "staticwebassets\\js\\jquery.slicknav.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\mixitup.min.js",
+      "PackagePath": "staticwebassets\\js\\mixitup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EntityFrameworkCoreCRUD.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EntityFrameworkCoreCRUD.props",
+      "PackagePath": "build\\EntityFrameworkCoreCRUD.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EntityFrameworkCoreCRUD.props",
+      "PackagePath": "buildMultiTargeting\\EntityFrameworkCoreCRUD.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EntityFrameworkCoreCRUD.props",
+      "PackagePath": "buildTransitive\\EntityFrameworkCoreCRUD.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

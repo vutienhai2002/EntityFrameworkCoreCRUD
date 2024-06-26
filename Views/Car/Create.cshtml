@@ -1,0 +1,241 @@
+﻿@using EntityFrameworkCoreCRUD.Models
+@model List<Car>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Create Car
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <link href="~/css/paper-dashboard.css" rel="stylesheet" />
+    <link href="~/css/paper-dashboard.min.css" rel="stylesheet" />
+    <a href="~/css/paper-dashboard.css.map">~/css/paper-dashboard.css.map</a>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <a href="~/css/bootstrap.min.css.map"></a>
+    <link href="~/css/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="white" data-active-color="danger">
+            <div class="logo">
+                <a class="simple-text logo-mini">
+                    <div class="logo-image-small">
+                    </div>
+                    <img src="~/image/logo.png" />
+                </a>
+                <a class="simple-text logo-normal">
+                    CITIZENS
+
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+
+                    <li class="active ">
+                        <a href="/car/index">
+                            <h6>Car</h6>
+                        </a>
+                    </li>
+                    @*  <li class="active ">
+                    <a href="/Employee/index">
+                    <h6>Employee</h6>
+                    </a>
+                    </li> *@
+                    <li class="active ">
+                        <a href="/Buyer/index">
+                            <h6>Buyer</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
+                        <a href="/Seller/index">
+                            <h6>Seller</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
+                        <a href="/Contact/index">
+                            <h6>Contact</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
+                        <a href="/Transaction/index">
+                            <h6>Transaction </h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-toggle">
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" href="javascript:;">Dashboard </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <form>
+                            <div class="input-group no-border">
+                                <input type="text" value="" class="form-control" placeholder="Search...">
+
+                            </div>
+                        </form>
+
+                        <ul class="navbar-nav">
+                            <li>
+                                @if (ViewBag.Username != null)
+                                {
+                                    <p>Hello, @ViewBag.Username!</p>
+                                    <form action="/User/Login" method="post" style="display: inline;">
+                                        <button type="submit" class="logout-button">Logout</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <p>You are not logged in.</p>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                           
+                            <div class="card-body">
+                                <div class="table-responsive">
+
+                                    <div class="content">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Create </h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <form action="/Car/CreateCar" method="post">
+                                                            <div class="form-group">
+                                                                <label>Manufacturer</label>
+                                                                <input type="text" class="form-control" name="Manufacturer" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Model</label>
+                                                                <input type="text" class="form-control" name="Model" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Year</label>
+                                                                <input type="number" class="form-control" name="Year" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Color</label>
+                                                                <input type="text" class="form-control" name="Color" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Engine Type</label>
+                                                                <input type="text" class="form-control" name="EngineType" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Mileage</label>
+                                                                <input type="number" class="form-control" name="Mileage" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Price</label>
+                                                                <input type="number" class="form-control" name="Price" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Image</label>
+                                                                <input type="file" class="form-control-file" name="Img" accept="Image/png, Image/jpeg,Image/jpg ">
+                                                            </div>
+
+                                                           @*  <label for="avatar">Choose a profile picture:</label
+                                                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+ *@
+                                                          @*   <div class="form-group">
+                                                                <label asp-for="Img" class="control-label">Upload Image</label>
+                                                                  <input type="file" name="ImageFile" class="form-control" />
+                                                            </div> *@
+
+
+                                                            <button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Save</button>
+                                                            <a asp-controller="Car" asp-action="Index" class="btn btn-lg btn-warning p-2">Back To List</a>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="https://www.creative-tim.com" target="_blank">Creative Tim</a></li>
+                                <li><a href="https://www.creative-tim.com/blog" target="_blank">Blog</a></li>
+                                <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
+                            </ul>
+                        </nav>
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                © <script>
+                                      document.write(new Date().getFullYear())
+                                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chart JS -->
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+    <script src="../assets/demo/demo.js"></script>
+</body>
+
+</html>
