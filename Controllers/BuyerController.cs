@@ -58,13 +58,27 @@ namespace EntityFrameworkCoreCRUD.Controllers
             }
         }
 
-
-    public IActionResult CreateBuyer(Buyer buyer)
+        public IActionResult SignUp()
         {
+            return View();
+        }
+
+        public IActionResult Home()
+        {
+            return View();
+        }
+        public IActionResult CreateBuyer(Buyer buyer)
+        {
+            if (_buyerService.IsUsernameExists(buyer.Username))
+            {
+                ViewData["ErrorMessage"] = "Username already exists.";
+                return View("Create");
+            }
+
             if (_buyerService.IsEmailExists(buyer.Email))
             {
                 ViewData["ErrorMessage"] = "Email already exists.";
-                return View("Create");
+                return View("Create");  
             }
 
             if (ModelState.IsValid)
@@ -73,6 +87,9 @@ namespace EntityFrameworkCoreCRUD.Controllers
                 TempData["ResultOk"] = "Record Added Successfully!";
                 return RedirectToAction("Index");
             }
+
+
+
             return View("index");
         }
 

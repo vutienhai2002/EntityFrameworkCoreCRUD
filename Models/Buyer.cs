@@ -21,5 +21,13 @@ namespace EntityFrameworkCoreCRUD.Models
 
         [StringLength(100)]
         public string Email { get; set; }
+
+        [Required]
+        [StringLength(50)] // Điều chỉnh độ dài cho phù hợp
+        public string Username { get; set; }
+
+        [Required]
+        [StringLength(50)] // Điều chỉnh độ dài cho phù hợp
+        public string Password { get; set; }
     }
 }

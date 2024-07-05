@@ -3821,3 +3821,55 @@ ol {
     }
     
 }
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.panel-form-steps {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.steps-register li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+    .steps-register li:last-child {
+        border-bottom: none;
+    }
+
+.steps-register .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+    .steps-register .form-group label {
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .steps-register .form-group select,
+    .steps-register .form-group input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .steps-register .form-group .input-group {
+        display: flex;
+        align-items: center;
+    }
+
+        .steps-register .form-group .input-group input {
+            flex: 1;
+        }
+
+    .steps-register .form-group .input-group-append {
+        margin-left: 8px;
+    }

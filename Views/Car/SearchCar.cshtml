@@ -83,8 +83,15 @@
                             <div class="header__top__social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-google"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                @if (Context.Session.GetString("Username") != null)
+                                {
+                                    <a href="#">Hello, @Context.Session.GetString("Username")!</a>
+                                    <a href="/User/Logout">Logout</a>
+                                }
+                                else
+                                {
+                                    <a href="/User/Login">Login</a>
+                                }
                             </div>
                         </div>
                     </div>
@@ -123,7 +130,7 @@
                                 <a href="#"><i class="fa fa-cart-plus"></i></a>
                                 <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
                             </div>
-                            <a href="#" class="primary-btn">Add Car</a>
+                            <a href="/Buycar/Buycar" class="primary-btn">Add Car</a>
                         </div>
                     </div>
                 </div>

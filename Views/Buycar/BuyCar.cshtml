@@ -1,0 +1,438 @@
+﻿@using EntityFrameworkCoreCRUD.Models
+@model List<Car>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAC | Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Css Styles -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/css/nice-select.css" rel="stylesheet" />
+    <link href="~/css/magnific-popup.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__widget">
+            <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+            <a href="#" class="primary-btn">Add Car</a>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="~/image/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <ul class="offcanvas__widget__add">
+            <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+            <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+        </ul>
+        <div class="offcanvas__phone__num">
+            <i class="fa fa-phone"></i>
+            <span>(+12) 345 678 910</span>
+        </div>
+        <div class="offcanvas__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul class="header__top__widget">
+                            <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+                            <li><i class="fa fa-envelope-o"></i> Vutienhai2002@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="header__top__right">
+                            <div class="header__top__phone">
+                                <i class="fa fa-phone"></i>
+                                <span>(+12) 345 678 910</span>
+                            </div>
+                            <div class="header__top__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                @if (Context.Session.GetString("Username") != null)
+                                {
+                                    <a href="#">Hello, @Context.Session.GetString("Username")!</a>
+                                    <a href="/User/Logout">Logout</a>
+                                }
+                                else
+                                {
+                                    <a href="/User/Login">Login</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="~/image/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="active"><a href="/Home/Index">Home</a></li>
+                                <li><a href="/Car/viewcar">Cars</a></li>
+                                <li><a href="/Blog/Blog">Blog</a></li>
+                                <li>
+                                    <a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="/Pages/About">About Us</a></li>
+                                        <li><a href="/Pages/Cardetails">Car Details</a></li>
+                                        <li><a href="/Pages/Blogdetails">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/Pages/About">About</a></li>
+                                <li><a href="/Contact/Contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__widget">
+                            <div class="header__nav__widget__btn">
+                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+                            </div>
+                            <a href="#" class="primary-btn">Add Car</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option set-bg" data-setbg="../Image/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Car Listing</h2>
+                        <div class="breadcrumb__links">
+                            <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                            <span>About</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <!-- Car Section Begin -->
+    <section class="car spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="car__sidebar">
+                        <div class="car__search">
+                            <h5>Car Search</h5>
+                            <form action="/Car/SearchCar">
+                                <input type="text" name="searchTerm" placeholder="Search...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="car__filter">
+                            <h5>Car Filter</h5>
+                            <form action="#">
+                                <select>
+                                    <option data-display="Manufacturer">Select manufacturer</option>
+                                    @foreach (var car in Model)
+                                    {
+                                        <option value="@car.CarId">@car.Manufacturer</option>
+                                    }
+                                </select>
+                                
+                                
+                                <button type="submit">Filter</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="car__items">
+                        <div class="row">
+                            <div class="box-warpper-buy-car">
+                                <div class="container">
+@*                                     <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="">Trang chủ</a></li><li class="breadcrumb-item"><a href="dang-ky-mua-xe/">Đăng ký mua xe</a></li></ol></nav>
+ *@                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-2 col-sm-12">
+                                            <h4>REGISTER TO BUY A VEHICLE</h4>
+                                        </div>
+                                        <div class="col-xl-9 col-lg-9 col-md-10 col-sm-12">
+                                            <form id="f-register-buy-car" method="post" action="">
+                                                <input type="hidden" name="type" value="mua">
+                                                <div class="panel-form-steps">
+                                                    <ol class="steps-register">
+                                                        <li class="active">
+                                                            <div class="row">
+                                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="required">Buyer Name</label>
+                                                                        <div class="input-group">
+                                                                            <select class="form-control" id="Name" required="" name="Name">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                                                                                 <option value="@car.CarId">@car.Manufacturer</option>
+                                                                            }
+                                                                              </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="required">Address</label>
+                                                                        <div class="input-group">
+                                                                            <input type="text" class="form-control" required="" name="Address" placeholder="">
+                                                                            <div class="input-group-append"> <span class="input-group-text"></span> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="required"> Phone</label>
+                                                                        <div class="input-group">
+                                                                            <input type="text" class="form-control" required="" name="Phone" placeholder="">
+                                                                            <div class="input-group-append"> <span class="input-group-text"></span> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="required">Email</label>
+                                                                        <div class="input-group">
+                                                                            <input type="text" class="form-control" required="" name="Email" placeholder="">
+                                                                            <div class="input-group-append"> <span class="input-group-text"></span> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+
+                                                  
+            <li class="active">
+
+                                                       <label>Main Information</label>
+<div class="row mb-4">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="form-group required">                                                                     
+            <select class="form-control" id="Manufacturer" required="" name="Manufacturer">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                        <option value="@car.CarId">@car.Manufacturer</option>
+                                                                            }
+            </select>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="form-group required">
+            <select class="form-control" id="Model" required="" name="Model">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                        <option value="@car.CarId">@car.Model</option>
+                                                                            }
+            </select>
+            <label for="model" class="d-none"></label>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="form-group required">
+            <select class="form-control" id="Year" required="" name="Year">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                        <option value="@car.CarId">@car.Year</option>
+                                                                            }
+            </select>
+            <label for="model" class="d-none"></label>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="form-group required">
+            <select class="form-control" id="Color" required="" name="Color">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                        <option value="@car.CarId">@car.Color</option>
+                                                                            }
+            </select>
+            <label for="model" class="d-none"></label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="form-group required">
+            <select class="form-control" id="EngineType" required="" name="EngineType">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                        <option value="@car.CarId">@car.EngineType</option>
+                                                                            }
+            </select>
+            <label for="model" class="d-none"></label>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="form-group required">
+            <select class="form-control" id="Mileage" required="" name="Mileage">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                        <option value="@car.CarId">@car.Mileage</option>
+                                                                            }
+            </select>
+            <label for="model" class="d-none"></label>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="form-group required">
+            <select class="form-control" id="Price" required="" name="Price">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                        <option value="@car.CarId">@car.Price</option>
+                                                                            }
+            </select>
+            <label for="model" class="d-none"></label>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="form-group required">
+            <select class="form-control" id="Img" required="" name="Img">
+                                                                            @foreach (var car in Model)
+                                                                            {
+                        <option value="@car.CarId">@car.Img</option>
+                                                                            }
+            </select>
+            <label for="model" class="d-none"></label>
+        </div>
+    </div>
+</div>
+
+
+</li>
+                                                            <li class="active">
+    <div class="form-group" style="margin-top: 30px;">
+        <button type="submit" class="btn btn-danger">REGISTER TO BUY A CAR</button>
+    </div>
+</li>
+
+                                                    </ol>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Car Section End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./index.html"><img src="~/image/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: Info.colorlib@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">About Our Shop</a></li>
+                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">Delivery infomation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Sitemap</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Innovation</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__text">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/mixitup.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+
+</html>
+

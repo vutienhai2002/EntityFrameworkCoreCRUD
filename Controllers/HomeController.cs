@@ -23,7 +23,7 @@ namespace EntityFrameworkCoreCRUD.Controllers
             }
             else
             {
-                return RedirectToAction("Login", "User");
+                return View();
             }
         }
 

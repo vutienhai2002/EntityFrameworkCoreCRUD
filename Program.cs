@@ -7,6 +7,7 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<BuyerService>();
 builder.Services.AddScoped<SellerService>();
 builder.Services.AddScoped<ContactService>();
+builder.Services.AddScoped<CarService>();
 
 
 // Add services to the container.

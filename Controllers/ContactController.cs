@@ -22,22 +22,13 @@ namespace EntityFrameworkCoreCRUD.Controllers
 
         public IActionResult AddContact(Contact contact,Buyer buyer)
         {
-            
-                if (ModelState.IsValid)
-                {
-                    // Assuming you have a service to add the contact
-                    contactService.AddContact(contact);
-                    TempData["SuccessMessage"] = "Your request has been sent successfully!";
-                    return RedirectToAction("Contact");
-                }
-                return View(contact);
-            
-
+            buyer.Password = "null";
+            buyer.Username = "null";
             int BuyerId = buyerService.AddBuyers(buyer);
             contact.BuyerId= BuyerId;
             contact.Date= DateTime.Now;
             contactService.AddContact(contact);
-            return RedirectToAction("create", "Car");
+            return RedirectToAction("Contact", "Contact");
         }
 
         public IActionResult Index()

@@ -12,7 +12,10 @@ namespace EntityFrameworkCoreCRUD.Service
         {
             _context = context;
         }
-
+        public bool IsUsernameExists(string username)
+        {
+            return _context.Buyers.Any(b => b.Username == username);
+        }
         public bool IsEmailExists(string email)
         {
             return _context.Buyers.Any(b => b.Email == email);
@@ -29,7 +32,11 @@ namespace EntityFrameworkCoreCRUD.Service
             return buyer.BuyerId; // Assuming that Id is the primary key and it is set after SaveChanges.
         }
 
-        public Buyer GetBuyerById(int id)
+        public List<Buyer> GetAllBuyers()
+        {
+            return _context.Buyers.ToList();
+        }
+            public Buyer GetBuyerById(int id)
         {
             return _context.Buyers.FirstOrDefault(b => b.BuyerId == id);
         }
@@ -39,7 +46,10 @@ namespace EntityFrameworkCoreCRUD.Service
             Buyer GetBuyerById(int id);
             // Other method definitions
         }
-
+        public Buyer CheckUsernamePassword(string username, string password)
+        {
+            return _context.Buyers.FirstOrDefault(b => b.Username == username && b.Password == password);
+        }
         public void UpdateBuyer(Buyer buyer)
         {
             var existingBuyer = _context.Buyers.FirstOrDefault(b => b.BuyerId == buyer.BuyerId);

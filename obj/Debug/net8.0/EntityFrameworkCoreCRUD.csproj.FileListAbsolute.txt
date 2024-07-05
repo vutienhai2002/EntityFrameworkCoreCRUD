@@ -138,3 +138,4 @@ C:\Users\hp\source\repos\EntityFrameworkCoreCRUD\bin\Debug\net8.0\Microsoft.AspN
 C:\Users\hp\source\repos\EntityFrameworkCoreCRUD\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\hp\source\repos\EntityFrameworkCoreCRUD\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\hp\source\repos\EntityFrameworkCoreCRUD\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\hp\source\repos\EntityFrameworkCoreCRUD\obj\Debug\net8.0\EntityFrameworkCoreCRUD.sourcelink.json

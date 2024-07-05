@@ -7,10 +7,14 @@ namespace EntityFrameworkCoreCRUD.Controllers
 	public class UserController : Controller
 	{
 		private readonly UserService _userService;
-		public UserController(UserService userService)
+        private readonly BuyerService _buyerService;
+
+        public UserController(UserService userService, BuyerService buyerService)
 		{
 			_userService = userService;
-		}
+            _buyerService= buyerService;
+
+        }
 		public IActionResult Login()
 		{
 			return View();
@@ -18,33 +22,33 @@ namespace EntityFrameworkCoreCRUD.Controllers
 		public IActionResult Loginuser(string username, string password)
 		{
 			User u = _userService.CheckUsernamePassword(username, password);
-			if (u != null)
-			{
-				if (u.username == username && u.password == password)
-				{
-                    HttpContext.Session.SetString("Username", u.username);
-                    HttpContext.Session.SetInt32("UserId", u.userId);
+            Buyer b = _buyerService.CheckUsernamePassword(username, password);
 
 
-                    return RedirectToAction("Index", "Car");
-				}
-				else
-				{
-					return RedirectToAction("Login", "Home");	
-				}
-			}
+            if (u != null)
+            {
+                HttpContext.Session.SetString("Username", u.username);
+                HttpContext.Session.SetInt32("UserId", u.userId);
 
 
-              else
+                return RedirectToAction("Index", "Car");
+            }
+            else if (b != null)
+            {
+                HttpContext.Session.SetString("Username", b.Username);
+                HttpContext.Session.SetInt32("UserId", b.BuyerId);
+
+                return RedirectToAction("BuyCar", "BuyCar");
+
+            }
+
+
+            else
             {
                 // Invalid credentials, display error message
                 ModelState.AddModelError(string.Empty, "Invalid username or password.");
                 return View("Login");
             }
-            {
-
-				return RedirectToAction("Login", "Home");	
-			}
 		}
 		public IActionResult Signupp()
 		{
