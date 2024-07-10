@@ -31,6 +31,7 @@ namespace EntityFrameworkCoreCRUD.Controllers
                 HttpContext.Session.SetInt32("UserId", u.userId);
 
 
+
                 return RedirectToAction("Index", "Car");
             }
             else if (b != null)

@@ -25,8 +25,9 @@ namespace EntityFrameworkCoreCRUD.Controllers
         public IActionResult Index()
         {
 
-            if (HttpContext.Session.GetString("Username") != null)
+            if (HttpContext.Session.GetString("Username") != null )
             {
+
                 var username = HttpContext.Session.GetString("Username");
                 ViewBag.Username = username;
                 var objCatlist = _context.Buyers.ToList();

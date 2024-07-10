@@ -1,4 +1,4 @@
-﻿@using EntityFrameworkCoreCRUD.Models
+﻿ @using EntityFrameworkCoreCRUD.Models
 @model List<Car>
 
 <!DOCTYPE html>
@@ -185,11 +185,18 @@
                         <div class="row">
                             <div class="box-warpper-buy-car">
                                 <div class="container">
-@*                                     <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="">Trang chủ</a></li><li class="breadcrumb-item"><a href="dang-ky-mua-xe/">Đăng ký mua xe</a></li></ol></nav>
- *@                                    <div class="row">
-                                        <div class="col-xl-3 col-lg-3 col-md-2 col-sm-12">
-                                            <h4>REGISTER TO BUY A VEHICLE</h4>
-                                        </div>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+
+                                            <li class="breadcrumb-item">
+                                                <h5 >
+                                                    Register to buy a car
+                                                </h5>
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                     <div class="row">
+
                                         <div class="col-xl-9 col-lg-9 col-md-10 col-sm-12">
                                             <form id="f-register-buy-car" method="post" action="">
                                                 <input type="hidden" name="type" value="mua">
@@ -201,12 +208,16 @@
                                                                     <div class="form-group">
                                                                         <label class="required">Buyer Name</label>
                                                                         <div class="input-group">
-                                                                            <select class="form-control" id="Name" required="" name="Name">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                                                                                 <option value="@car.CarId">@car.Manufacturer</option>
-                                                                            }
-                                                                              </select>
+                                                                            <input class="form-control" id="Name" required="" name="Name">
+                                                                                @if (ViewBag.Buyers != null)
+                                                                                {
+                                                                                    foreach (var buyer in ViewBag.Buyers)
+                                                                                    {
+                                                                                        <option value="@buyer.BuyerId">@buyer.Name</option>
+                                                                                    }
+                                                                                }
+
+                                                                            </input>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -214,8 +225,8 @@
                                                                     <div class="form-group">
                                                                         <label class="required">Address</label>
                                                                         <div class="input-group">
-                                                                            <input type="text" class="form-control" required="" name="Address" placeholder="">
-                                                                            <div class="input-group-append"> <span class="input-group-text"></span> </div>
+                                                                            <input  class="form-control" required="" name="Address" >
+                                                                            <div class="input-group-append">  </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -223,8 +234,8 @@
                                                                     <div class="form-group">
                                                                         <label class="required"> Phone</label>
                                                                         <div class="input-group">
-                                                                            <input type="text" class="form-control" required="" name="Phone" placeholder="">
-                                                                            <div class="input-group-append"> <span class="input-group-text"></span> </div>
+                                                                            <input class="form-control" required="" name="Phone" >
+                                                                            <div class="input-group-append">  </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -232,117 +243,112 @@
                                                                     <div class="form-group">
                                                                         <label class="required">Email</label>
                                                                         <div class="input-group">
-                                                                            <input type="text" class="form-control" required="" name="Email" placeholder="">
-                                                                            <div class="input-group-append"> <span class="input-group-text"></span> </div>
+                                                                            <input  class="form-control" required="" name="Email">
+                                                                            <div class="input-group-append">  </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </li>
-
-                                                  
-            <li class="active">
-
-                                                       <label>Main Information</label>
-<div class="row mb-4">
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-        <div class="form-group required">                                                                     
-            <select class="form-control" id="Manufacturer" required="" name="Manufacturer">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                        <option value="@car.CarId">@car.Manufacturer</option>
-                                                                            }
-            </select>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-        <div class="form-group required">
-            <select class="form-control" id="Model" required="" name="Model">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                        <option value="@car.CarId">@car.Model</option>
-                                                                            }
-            </select>
-            <label for="model" class="d-none"></label>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-        <div class="form-group required">
-            <select class="form-control" id="Year" required="" name="Year">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                        <option value="@car.CarId">@car.Year</option>
-                                                                            }
-            </select>
-            <label for="model" class="d-none"></label>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-        <div class="form-group required">
-            <select class="form-control" id="Color" required="" name="Color">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                        <option value="@car.CarId">@car.Color</option>
-                                                                            }
-            </select>
-            <label for="model" class="d-none"></label>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-        <div class="form-group required">
-            <select class="form-control" id="EngineType" required="" name="EngineType">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                        <option value="@car.CarId">@car.EngineType</option>
-                                                                            }
-            </select>
-            <label for="model" class="d-none"></label>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-        <div class="form-group required">
-            <select class="form-control" id="Mileage" required="" name="Mileage">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                        <option value="@car.CarId">@car.Mileage</option>
-                                                                            }
-            </select>
-            <label for="model" class="d-none"></label>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-        <div class="form-group required">
-            <select class="form-control" id="Price" required="" name="Price">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                        <option value="@car.CarId">@car.Price</option>
-                                                                            }
-            </select>
-            <label for="model" class="d-none"></label>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-        <div class="form-group required">
-            <select class="form-control" id="Img" required="" name="Img">
-                                                                            @foreach (var car in Model)
-                                                                            {
-                        <option value="@car.CarId">@car.Img</option>
-                                                                            }
-            </select>
-            <label for="model" class="d-none"></label>
-        </div>
-    </div>
-</div>
-
-
-</li>
                                                             <li class="active">
-    <div class="form-group" style="margin-top: 30px;">
-        <button type="submit" class="btn btn-danger">REGISTER TO BUY A CAR</button>
-    </div>
-</li>
+                                                           <label>Main Information</label>
+                                                        <div class="row mb-4">
+                                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="form-group required">                                                                     
+                                                                    <select class="form-control" id="Manufacturer" required="" name="Manufacturer">
+                                                                        @foreach (var car in Model)
+                                                                         {
+                                                                          <option value="@car.CarId">@car.Manufacturer</option>
+                                                                         }
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="form-group required">
+                                                                    <select class="form-control" id="Model" required="" name="Model">
+                                                                        @foreach (var car in Model)
+                                                                         {
+                                                                           <option value="@car.CarId">@car.Model</option>
+                                                                         }
+                                                                    </select>
+                                                                    <label for="model" class="d-none"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="form-group required">
+                                                                    <select class="form-control" id="Year" required="" name="Year">
+                                                                      @foreach (var car in Model)
+                                                                       {
+                                                                         <option value="@car.CarId">@car.Year</option>
+                                                                        }
+                                                                    </select>
+                                                                    <label for="model" class="d-none"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="form-group required">
+                                                                    <select class="form-control" id="Color" required="" name="Color">
+                                                                      @foreach (var car in Model)
+                                                                       {
+                                                                       <option value="@car.CarId">@car.Color</option>
+                                                                       }
+                                                                    </select>
+                                                                    <label for="model" class="d-none"></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="form-group required">
+                                                                    <select class="form-control" id="EngineType" required="" name="EngineType">
+                                                                     @foreach (var car in Model)
+                                                                     {
+                                                                    <option value="@car.CarId">@car.EngineType</option>
+                                                                     }
+                                                                    </select>
+                                                                    <label for="model" class="d-none"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="form-group required">
+                                                                    <select class="form-control" id="Mileage" required="" name="Mileage">
+                                                                     @foreach (var car in Model)
+                                                                     {
+                                                                      <option value="@car.CarId">@car.Mileage</option>
+                                                                     }
+                                                                    </select>
+                                                                    <label for="model" class="d-none"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="form-group required">
+                                                                    <select class="form-control" id="Price" required="" name="Price">
+                                                                     @foreach (var car in Model)
+                                                                      {
+                                                                       <option value="@car.CarId">@car.Price</option>
+                                                                      }
+                                                                    </select>
+                                                                    <label for="model" class="d-none"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                <div class="form-group required">
+                                                                    <select class="form-control" id="Img" required="" name="Img">
+                                                                      @foreach (var car in Model)
+                                                                       {
+                                                                       <option value="@car.CarId">@car.Img</option>
+                                                                       }
+                                                                    </select>
+                                                                    <label for="model" class="d-none"></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </li>
+                                                                  <li class="active">
+                                                            <div class="form-group" style="margin-top: 30px;">
+                                                                <button type="submit" class="btn btn-danger">REGISTER TO BUY A CAR</button>
+                                                            </div>
+                                                        </li>
 
                                                     </ol>
                                                 </div>
@@ -359,67 +365,89 @@
     </section>
     <!-- Car Section End -->
     <!-- Footer Section Begin -->
-    <footer class="footer spad">
+    <footer class="footer set-bg" data-setbg="../Image/footer-bg.jpg">
         <div class="container">
+            <div class="footer__contact">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__contact__title">
+                            <h2>Contact Us Now!</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__contact__option">
+                            <div class="option__item"><i class="fa fa-phone"></i> (+12) 345 678 910</div>
+                            <div class="option__item email"><i class="fa fa-envelope-o"></i> Colorlib@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-4">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="./index.html"><img src="~/image/logo.png" alt=""></a>
+                            <a href="#"><img src="~/image/footer-logo.png" alt=""></a>
                         </div>
-                        <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: Info.colorlib@gmail.com</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
-                        <h6>Useful Links</h6>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Delivery infomation</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="footer__widget">
-                        <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
-                        <div class="footer__widget__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                            <a href="#"><i class="fa fa-youtube"></i></a>
+                        <p>
+                            Any questions? Let us know in store at 625 Gloria Union, California, United Stated or call us
+                            on (+1) 96 123 8888
+                        </p>
+                        <div class="footer__social">
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="google"><i class="fa fa-google"></i></a>
+                            <a href="#" class="skype"><i class="fa fa-skype"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer__text">
-                        <p></p>
+                <div class="col-lg-2 offset-lg-1 col-md-3">
+                    <div class="footer__widget">
+                        <h5>Infomation</h5>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Payemnt</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <div class="footer__widget">
+                        <h5>Infomation</h5>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Hatchback</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Sedan</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> SUV</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Crossover</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer__brand">
+                        <h5>Top Brand</h5>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Abarth</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Acura</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Audi</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> BMW</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Ferrari</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <div class="footer__copyright__text">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            </div>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </div>
     </footer>
     <!-- Footer Section End -->
@@ -436,3 +464,4 @@
 
 </html>
 
+ 

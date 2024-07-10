@@ -48,7 +48,7 @@
             <a href="#" class="primary-btn">Add Car</a>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="./index.html"><img src="~/image/logo.png" alt=""></a>
         </div>
         <nav class="offcanvas__menu mobile-menu">
             <ul>
@@ -72,6 +72,17 @@
         <ul class="offcanvas__widget__add">
             <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
             <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+            <li>
+                <i class="fa fa-envelope-o"></i>
+                if (ViewBag.Username != null)
+                {
+                <p>Hello, @ViewBag.Username!</p>
+                }
+                else
+                {
+                <p>Login</p>
+                }
+            </li>
         </ul>
         <div class="offcanvas__phone__num">
             <i class="fa fa-phone"></i>
@@ -80,7 +91,7 @@
         <div class="header__top__social">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
-            @if (Context.Session.GetString("Username") != null)
+           @*  @if (Context.Session.GetString("Username") != null)
             {
                 <a href="#">Hello, @Context.Session.GetString("Username")!</a>
                 <a href="/User/Logout">Logout</a>
@@ -88,7 +99,7 @@
             else
             {
                 <a href="/User/Login">Login</a>
-            }
+            } *@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
@@ -112,8 +123,15 @@
                             <div class="header__top__social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-google"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                @if (Context.Session.GetString("Username") != null)
+                                {
+                                    <a href="#">Hello, @Context.Session.GetString("Username")!</a>
+                                    <a href="/User/Logout">Logout</a>
+                                }
+                                else
+                                {
+                                    <a href="/User/Login">Login</a>
+                                }
                             </div>
                         </div>
                     </div>
@@ -124,7 +142,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="~/image/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -217,7 +235,7 @@
                                 <input type="text" placeholder="Message" name="Message">
                                 </div>
                             
-                            <input type="submit" value="Gửi yêu cầu" />
+                            <input type="submit" value="Send require" class="btn btn-danger" />
                         </form>
                     </div>
                 </div>
@@ -226,6 +244,39 @@
     </section>
     <!-- Contact Section End -->
     <!-- Contact Address Begin -->
+
+
+    <div class="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="cta__item set-bg" data-setbg="../Image/cta/cta-1.jpg">
+                      
+                        <h4>California Showroom</h4>
+                        <p>625 Gloria Union, California, United Stated Colorlib.california@gmail.com</p>
+                        <p>(+12) 456 678 9100</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="cta__item set-bg" data-setbg="../Image/cta/cta-2.jpg">
+                        <h4>New York Showroom</h4>
+                        <p>8235 South Ave. Jamestown, NewYork Colorlib.Newyork@gmail.com</p>
+                        <p>(+12) 456 678 9100</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+@* 
     <div class="contact-address">
         <div class="container">
             <div class="contact__address__text">
@@ -254,10 +305,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> *@
     <!-- Contact Address End -->
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+    <footer class="footer set-bg" data-setbg="../Image/footer-bg.jpg">
         <div class="container">
             <div class="footer__contact">
                 <div class="row">
@@ -278,7 +329,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#"><img src="~/image/footer-logo.png" alt=""></a>
                         </div>
                         <p>
                             Any questions? Let us know in store at 625 Gloria Union, California, United Stated or call us

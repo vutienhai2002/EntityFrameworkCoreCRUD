@@ -19,5 +19,6 @@ namespace EntityFrameworkCoreCRUD.Models
 
         [StringLength(100)]
         public string Email { get; set; }
+
     }
 }

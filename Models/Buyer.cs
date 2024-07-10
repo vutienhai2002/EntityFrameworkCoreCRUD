@@ -29,5 +29,6 @@ namespace EntityFrameworkCoreCRUD.Models
         [Required]
         [StringLength(50)] // Điều chỉnh độ dài cho phù hợp
         public string Password { get; set; }
+
     }
 }

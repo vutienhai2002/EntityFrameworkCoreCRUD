@@ -12,6 +12,12 @@ namespace EntityFrameworkCoreCRUD.Service
         {
             _context = context;
         }
+
+
+        public bool IsUsernameTaken(string username)
+        {
+            return _context.Buyers.Any(u => u.Username == username);
+        }   
         public bool IsUsernameExists(string username)
         {
             return _context.Buyers.Any(b => b.Username == username);
@@ -71,5 +77,10 @@ namespace EntityFrameworkCoreCRUD.Service
 
             _context.SaveChanges();
         }
+      /*  public string GetBuyerRole(int buyerId)
+        {
+            var buyer = _context.Buyers.Find(buyerId);
+            return buyer?.role;
+        }*/
     }
 }

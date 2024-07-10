@@ -26,6 +26,7 @@ namespace EntityFrameworkCoreCRUD.Controllers
 
         public IActionResult Register(Buyer buyer)
         {
+
             if (ModelState.IsValid)
             {
                 _buyerService.AddBuyer(buyer);
