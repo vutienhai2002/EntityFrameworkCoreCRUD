@@ -34,5 +34,6 @@ namespace EntityFrameworkCoreCRUD.Service
             _context.Contacts.Update(contact);
             _context.SaveChanges();
         }
+
     }
 }

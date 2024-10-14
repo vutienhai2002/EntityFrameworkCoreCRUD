@@ -50,6 +50,11 @@
                 <ul class="nav">
                    
                     <li class="active ">
+                        <a href="/Dashboard/index">
+                            <h6>Dashboard</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
                         <a href="/car/index">
                             <h6>Car</h6>
                         </a>
@@ -74,11 +79,12 @@
                             <h6>Contact</h6>
                         </a>
                     </li>
-                    <li class="active ">
-                        <a href="/Transaction/index">
-                            <h6>Transaction </h6>
+                     <li class="active ">
+                        <a href="/OrderDetail/index">
+                            <h6>OrderDetail</h6>
                         </a>
                     </li>
+                 
                 </ul>            </div>
         </div>
         <div class="main-panel">
@@ -133,14 +139,7 @@
                            
                             <div class="container shadow p-5">
                                 <div class="row pb-2">
-                                    <h2>Add Buyer</h2>
-                                    <div></div>
-
-                           @*  @if (ViewData["ErrorMessage"] != null)
-                                        {
-                                            <p class="text-danger">@ViewData["ErrorMessage"]</p>
-                                        } *@
-                               
+                                    <h2>Add Buyer</h2>       
                                 </div>
 
                                      <form action="/Buyer/CreateBuyer" method="post">
@@ -165,9 +164,13 @@
                                         }
                                     </div>
 
-                                    <button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Save</button>
-                                    <a asp-controller="Buyer" asp-action="Index" class="btn btn-lg btn-warning p-2">Back To List</a
-                                </form> </div>
+                                    <button type="submit" class="btn btn-lg btn-primary p-1"><i class="bi bi-file-plus-fill"></i>Save</button>
+                                    <a asp-controller="Buyer" asp-action="Index" class="btn btn-lg btn-warning p-1">Back To List</a
+                                </form>
+                                
+                            
+                            
+                            </div>
                         </div>
                     </div>
 
@@ -200,7 +203,7 @@
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!--  Google Maps Plugin    -->
+    <!--  Google Maps Plugin    --> 
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Chart JS -->
     <script src="../assets/js/plugins/chartjs.min.js"></script> 

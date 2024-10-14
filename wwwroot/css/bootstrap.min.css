@@ -100,7 +100,8 @@ address {
 
 dl, ol, ul {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    margin-left: 15px
 }
 
     ol ol, ol ul, ul ol, ul ul {

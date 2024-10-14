@@ -85,7 +85,6 @@ namespace EntityFrameworkCoreCRUD.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Img")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Manufacturer")
@@ -136,6 +135,67 @@ namespace EntityFrameworkCoreCRUD.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BuyerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Messager")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("OrderId");
+
+                    b.HasIndex("BuyerId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.OrderDetail", b =>
+                {
+                    b.Property<int>("OrderDetailId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderDetailId"));
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderDetailId");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderDetails");
+                });
+
             modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.Seller", b =>
                 {
                     b.Property<int>("SellerId")
@@ -167,42 +227,6 @@ namespace EntityFrameworkCoreCRUD.Migrations
                     b.HasKey("SellerId");
 
                     b.ToTable("Sellers");
-                });
-
-            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.Transaction", b =>
-                {
-                    b.Property<int>("TransactionId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"));
-
-                    b.Property<int>("BuyerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CarId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PaymentMethod")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("SellerId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("TransactionDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("TransactionId");
-
-                    b.HasIndex("BuyerId");
-
-                    b.HasIndex("CarId");
-
-                    b.HasIndex("SellerId");
-
-                    b.ToTable("Transactions");
                 });
 
             modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.User", b =>
@@ -239,31 +263,49 @@ namespace EntityFrameworkCoreCRUD.Migrations
                     b.Navigation("Contact");
                 });
 
-            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.Transaction", b =>
+            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.Order", b =>
                 {
                     b.HasOne("EntityFrameworkCoreCRUD.Models.Buyer", "Buyer")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("BuyerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EntityFrameworkCoreCRUD.Models.Car", "Car")
-                        .WithMany()
+                    b.Navigation("Buyer");
+                });
+
+            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.OrderDetail", b =>
+                {
+                    b.HasOne("EntityFrameworkCoreCRUD.Models.Car", "Cars")
+                        .WithMany("OrderDetails")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EntityFrameworkCoreCRUD.Models.Seller", "Seller")
-                        .WithMany()
-                        .HasForeignKey("SellerId")
+                    b.HasOne("EntityFrameworkCoreCRUD.Models.Order", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Buyer");
+                    b.Navigation("Cars");
 
-                    b.Navigation("Car");
+                    b.Navigation("Order");
+                });
 
-                    b.Navigation("Seller");
+            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.Buyer", b =>
+                {
+                    b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.Car", b =>
+                {
+                    b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("EntityFrameworkCoreCRUD.Models.Order", b =>
+                {
+                    b.Navigation("OrderDetails");
                 });
 #pragma warning restore 612, 618
         }

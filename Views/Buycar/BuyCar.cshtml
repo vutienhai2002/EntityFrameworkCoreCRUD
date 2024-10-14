@@ -71,7 +71,9 @@
                         <div class="header__top__right">
                             <div class="header__top__phone">
                                 <i class="fa fa-phone"></i>
-                                <span>(+12) 345 678 910</span>
+                                <span>(+12) 345 678 910</span>        @*   <span onclick="location.href='tel:+84912345678'">Gọi ngay: 0912345678</span> *@
+                                          
+
                             </div>
                             <div class="header__top__social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
@@ -118,8 +120,10 @@
                             </ul>
                         </nav>
                         <div class="header__nav__widget">
+
+
                             <div class="header__nav__widget__btn">
-                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+
                                 <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
                             </div>
                             <a href="#" class="primary-btn">Add Car</a>
@@ -186,12 +190,12 @@
                             <div class="box-warpper-buy-car">
                                 <div class="container">
                                     <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
+                                        <ol class="breadcrumb" style="text-align: center;">
 
                                             <li class="breadcrumb-item">
-                                                <h5 >
+                                                <h4 >
                                                     Register to buy a car
-                                                </h5>
+                                                </h>
                                             </li>
                                         </ol>
                                     </nav>
@@ -200,7 +204,7 @@
                                         <div class="col-xl-9 col-lg-9 col-md-10 col-sm-12">
                                             <form id="f-register-buy-car" method="post" action="">
                                                 <input type="hidden" name="type" value="mua">
-                                                <div class="panel-form-steps">
+                                                <div class="panel-form-steps" style="width:820px;">
                                                     <ol class="steps-register">
                                                         <li class="active">
                                                             <div class="row">
@@ -208,16 +212,14 @@
                                                                     <div class="form-group">
                                                                         <label class="required">Buyer Name</label>
                                                                         <div class="input-group">
-                                                                            <input class="form-control" id="Name" required="" name="Name">
-                                                                                @if (ViewBag.Buyers != null)
-                                                                                {
-                                                                                    foreach (var buyer in ViewBag.Buyers)
-                                                                                    {
-                                                                                        <option value="@buyer.BuyerId">@buyer.Name</option>
-                                                                                    }
-                                                                                }
-
-                                                                            </input>
+                                                                            @if (Context.Session.GetString("Name") != null)
+                                                                            {
+                                                                                <input class="form-control" id="Name" name="Name" required value="@Context.Session.GetString("Name")" readonly>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <a href="/User/Login">Login</a>
+                                                                            }
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -225,35 +227,59 @@
                                                                     <div class="form-group">
                                                                         <label class="required">Address</label>
                                                                         <div class="input-group">
-                                                                            <input  class="form-control" required="" name="Address" >
-                                                                            <div class="input-group-append">  </div>
+                                                                            @if (Context.Session.GetString("Address") != null)
+                                                                            {
+                                                                                <input class="form-control" id="Address" name="Address" required value="@Context.Session.GetString("Address")" readonly>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <a href="/User/Login">Login</a>
+                                                                            }
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                                                     <div class="form-group">
-                                                                        <label class="required"> Phone</label>
+                                                                        <label class="required">Phone</label>
                                                                         <div class="input-group">
-                                                                            <input class="form-control" required="" name="Phone" >
-                                                                            <div class="input-group-append">  </div>
+                                                                            @if (Context.Session.GetString("Phone") != null)
+                                                                            {
+                                                                                <input class="form-control" id="Phone" name="Phone" required value="@Context.Session.GetString("Phone")" readonly>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <a href="/User/Login">Login</a>
+                                                                            }
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                                                     <div class="form-group">
                                                                         <label class="required">Email</label>
                                                                         <div class="input-group">
-                                                                            <input  class="form-control" required="" name="Email">
-                                                                            <div class="input-group-append">  </div>
+                                                                            @if (Context.Session.GetString("Email") != null)
+                                                                            {
+                                                                                <input class="form-control" id="Email" name="Email" required value="@Context.Session.GetString("Email")" readonly>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <a href="/User/Login">Login</a>
+                                                                            }
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </li>
+
+</li>
+
+
+
                                                             <li class="active">
                                                            <label>Main Information</label>
                                                         <div class="row mb-4">
                                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                    <label class="required">Manufacturer</label>
+
                                                                 <div class="form-group required">                                                                     
                                                                     <select class="form-control" id="Manufacturer" required="" name="Manufacturer">
                                                                         @foreach (var car in Model)
@@ -264,6 +290,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                    <label class="required">Model</label>
+
                                                                 <div class="form-group required">
                                                                     <select class="form-control" id="Model" required="" name="Model">
                                                                         @foreach (var car in Model)
@@ -275,6 +303,10 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                    <label class="required">
+                                                                        Production year
+                                                                    </label>
+
                                                                 <div class="form-group required">
                                                                     <select class="form-control" id="Year" required="" name="Year">
                                                                       @foreach (var car in Model)
@@ -286,6 +318,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                    <label class="required">Color</label>
                                                                 <div class="form-group required">
                                                                     <select class="form-control" id="Color" required="" name="Color">
                                                                       @foreach (var car in Model)
@@ -299,6 +332,8 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                    <label class="required">EngineType</label>
+
                                                                 <div class="form-group required">
                                                                     <select class="form-control" id="EngineType" required="" name="EngineType">
                                                                      @foreach (var car in Model)
@@ -310,6 +345,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                    <label class="required">kilometer</label>
+
                                                                 <div class="form-group required">
                                                                     <select class="form-control" id="Mileage" required="" name="Mileage">
                                                                      @foreach (var car in Model)
@@ -321,6 +358,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                    <label class="required">Price</label>
+
                                                                 <div class="form-group required">
                                                                     <select class="form-control" id="Price" required="" name="Price">
                                                                      @foreach (var car in Model)
@@ -332,11 +371,15 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                                    <label class="required">Image</label>
+
                                                                 <div class="form-group required">
                                                                     <select class="form-control" id="Img" required="" name="Img">
                                                                       @foreach (var car in Model)
                                                                        {
                                                                        <option value="@car.CarId">@car.Img</option>
+
+
                                                                        }
                                                                     </select>
                                                                     <label for="model" class="d-none"></label>
@@ -427,21 +470,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer__brand">
-                        <h5>Top Brand</h5>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Abarth</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Acura</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Audi</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> BMW</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Ferrari</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
-                        </ul>
+                        <h5>Maps</h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0346767787887!2d105.77835920904023!3d21.030641970303307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454bab8c5e73b%3A0x15f3308da6ba66c4!2zTeG7uSDEkMOsbmggMiwgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2sus!4v1721270257496!5m2!1svi!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+
             </div>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             <div class="footer__copyright__text">

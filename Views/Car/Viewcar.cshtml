@@ -15,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Css Styles -->
     <link href="~/css/bootstrap.minn.css" rel="stylesheet" />
     <link href="~/css/font-awesome.min.css" rel="stylesheet" />
@@ -26,7 +26,6 @@
     <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="~/css/slicknav.min.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
-
 </head>
 
 <body>
@@ -40,7 +39,7 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__widget">
           <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-            <a href="#" class="primary-btn">Add Car</a>
+            <a href="/Cart/ListCart" class="primary-btn"> List Cart </a>
         </div>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="~/image/logo.png" alt=""></a> 
@@ -78,7 +77,7 @@
                         <div class="header__top__right">
                             <div class="header__top__phone">
                                 <i class="fa fa-phone"></i>
-                                <span>(+12) 345 678 910</span>
+                                <a href="tel:+12345678910"><span>(+12) 345 678 910</span></a>
                             </div>
                             <div class="header__top__social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
@@ -127,10 +126,10 @@
                         </nav>
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
-                                <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+@*                                 <a href="#"><i class="fa fa-cart-plus"></i></a>
+ *@                                <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
                             </div>
-                            <a href="/Buycar/Buycar" class="primary-btn">Add Car</a>
+                            <a href="/Cart/ListCart" class="primary-btn"> List Cart </a>
                         </div>
                     </div>
                 </div>
@@ -158,9 +157,18 @@
             </div>
         </div>
     </div>
+
     <!-- Breadcrumb Begin -->
     <!-- Car Section Begin -->
-    <section class="car spad">
+    <section class="car spad">  
+@if (TempData["ResultOk"] != null)
+    {
+        <div class="alert alert-success" style="    margin-top: 15px;    margin-left: 1200px;
+    ">
+            @TempData["ResultOk"]
+        </div>
+    }    
+</div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
@@ -201,8 +209,7 @@
                                 </select>
                                
                                 <select>
-                                    <option value="">Price</option>
-                        
+                                    <option value="">Price</option>                       
                                 </select>
                                 <div class="filter-price">
                                     <p>Price:</p>
@@ -223,59 +230,10 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <div class="car__filter__option">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="car__filter__option__item">
-                                    <h6>Show On Page</h6>
-                                    <select>
-                                        <option value="">9 Car</option>
-                                        <option value="">15 Car</option>
-                                        <option value="">20 Car</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="car__filter__option__item car__filter__option__item--right">
-                                    <h6>Sort By</h6>
-                                    <select>
-                                        <option value="">Price: Highest Fist</option>
-                                        <option value="">Price: Lowest Fist</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-@*                     <div class="row">
-                         @foreach (var item in Model)
-                        {
-                            <div class="col-lg-4 col-md-4">
-                                <div class="car__item">
-                                    <div class="car__item__pic__slider owl-carousel">
-                                        <img src="@item.Img" alt="">
+                
 
-                                    </div>
-                                    <div class="car__item__text">
-                                        <div class="car__item__text__inner">
-                                            <div class="label-date">@item.Year</div>
-                                            <h5>@item.Manufacturer</h5>
-                                            <ul>
-                                                <li><span>@item.Model</span> Model</li>
-                                                <li>@item.Color</li>
-                                                <li><span>@item.Mileage</span> Km </li>
-                                            </ul
-                                        </div>
-                                        <div class="car__item__price">
-                                            <span class="car-option">For Rent</span>
-                                            <h6>@item.Price<span></span> $</h6> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                       
-                    </div>
- *@
+
+
                     <div class="row">
                         @foreach (var item in Model)
                         {
@@ -283,21 +241,29 @@
                                 <!-- Đổi class col-lg-4 col-md-4 thành class col-lg-4 col-md-6 và thêm vào mb-4  -->
                                 <div class="car__item">
                                     <div class="car__item__pic__slider owl-carousel">
-                                        <img src="@item.Img" alt="">
+                                        <img src="~/@item.Img" alt="">
                                     </div>
                                     <div class="car__item__text">
                                         <div class="car__item__text__inner">
-                                            <div class="label-date">@item.Year</div>
-                                            <h5>@item.Manufacturer</h5>
-                                            <ul>
-                                                <li><span>@item.Model</span> Model</li>
-                                                <li>@item.Color</li>
-                                                <li><span>@item.Mileage</span> Km </li>
+@*                                             <div class="label-date">@item.Manufacturer</div>
+ *@                                            <button  onclick="Addtocart('@item.CarId', '@item.Manufacturer', '@item.Price', '@Url.Content(item.Img)')" class="label-date">Add to Cart</button>
+
+@*                                             <h5>@item.Model</h5>
+ *@                                            <ul>
+                                                <li><span><i class="fas fa-car"></i>: @item.Manufacturer</span></li>
+                                                <li><span><i class="fa-solid fa-calendar-days"></i>: @item.Model</span></li
+                                                <li><span><i class="fa-solid fa-money-bill"></i>: @item.Price.ToString("C")</span></li>
+                                                <li><span><i class="fa-solid fa-palette"></i>:  @item.Color </span></li>
+                                                <li><span><i class="bi bi-car-front-fill"></i> :  @item.EngineType</span></li>
+                                                <li><span><i class="fa-solid fa-clock"></i> : @item.Mileage Km</span> </li>
+
                                             </ul>
                                         </div>
                                         <div class="car__item__price">
-                                            <span class="car-option">For Rent</span>
-                                            <h6>@item.Price<span></span> $</h6>
+                                          <span>  <a href="/car/CarDetails?id=@item.CarId" class="car-option">View Details</a></span>
+@*                                             <span class="price-tag">@item.Price.ToString("C") </span>
+ *@                                          <span class="price-tag"> @item.Year</span>
+
                                         </div>
                                     </div>
                                 </div>
@@ -305,14 +271,15 @@
                         }
                     </div>
 
+                 
 
-
-                    <div class="pagination__option">
+                   @*  <div class="pagination__option">
                         <a href="#" class="active">1</a>
                         <a href="#">2</a>
                         <a href="#">3</a>
                         <a href="#"><span class="arrow_carrot-2right"></span></a>
-                    </div>
+                    </div>   *@
+
                 </div>
             </div>
         </div>
@@ -379,21 +346,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer__brand">
-                        <h5>Top Brand</h5>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Abarth</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Acura</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Audi</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> BMW</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Ferrari</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
-                        </ul>
+                        <h5>Maps</h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0346767787887!2d105.77835920904023!3d21.030641970303307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454bab8c5e73b%3A0x15f3308da6ba66c4!2zTeG7uSDEkMOsbmggMiwgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2sus!4v1721270257496!5m2!1svi!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+
             </div>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             <div class="footer__copyright__text">
@@ -423,7 +380,32 @@
     <script src="~/js/jquery.slicknav.js"></script> 
     <script src="~/js/owl.carousel.min.js"></script>
     <script src="~/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <script>
+        function Addtocart(CarId, Manufacturer, Price, Img) {
+            $.ajax({
+                url: '/cart/Addtocart',
+                type: 'POST',
+                data: {
+                    CarId: CarId,
+                    Manufacturer: Manufacturer,
+                    Price: Price,
+                    quantitys: 1,
+                    Img : Img
+                },
+                success: function (response) {
+                    console.log(response);
+                },
+                error: function (xhr, status, error) {
+                    console.error(error);
+                }
+            });
+
+        }
+
+    </script>
 </body>
+
 
 </html>

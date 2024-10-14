@@ -17,26 +17,35 @@ namespace EntityFrameworkCoreCRUD.Controllers
             _context = context;
             _sellerService = sellerService;
         }
-        
-        public IActionResult Index()
+
+        public IActionResult Index(int page = 1)
         {
+            const int PageSize = 5; // Number of items per page
+
             if (HttpContext.Session.GetString("Username") != null)
             {
                 var username = HttpContext.Session.GetString("Username");
                 ViewBag.Username = username;
-                var objCatlist = _context.Sellers.ToList();
-            if (objCatlist == null)
-            {
-                objCatlist = new List<Seller>(); // Khởi tạo một danh sách trống nếu không có dữ liệu
-            }
-            return View(objCatlist);
+
+                var totalSellers = _context.Sellers.Count();
+                var totalPages = (int)Math.Ceiling(totalSellers / (double)PageSize);
+                var sellers = _context.Sellers
+                                       .OrderBy(s => s.SellerId) // Optional: Order by some property
+                                       .Skip((page - 1) * PageSize)
+                                       .Take(PageSize)
+                                       .ToList();
+
+                ViewBag.CurrentPage = page;
+                ViewBag.TotalPages = totalPages;
+
+                return View(sellers);
             }
             else
             {
                 return RedirectToAction("Login", "User");
             }
-        
-    }
+        }
+
 
         public IActionResult Create()
         {
@@ -93,29 +102,31 @@ namespace EntityFrameworkCoreCRUD.Controllers
                 return RedirectToAction("Login", "User");
             }
         }
-        public IActionResult EditSeller(Seller Sellerobj)
+        public IActionResult EditSeller(Seller seller)
         {
+
             if (ModelState.IsValid)
             {
-                _context.Sellers.Update(Sellerobj);
+                _context.Sellers.Update(seller);
                 _context.SaveChanges();
-                TempData["ResultOk"] = "Data Updated Successfully!";
+                TempData["ResultOk"] = "Data Updated Successfully !";
                 return RedirectToAction("Index");
             }
-            return View(Sellerobj);
+
+            return View(seller);
         }
 
         public IActionResult DeleteSeller(int? id)
         {
-            var deleterecord = _context.Buyers.Find(id);
+            var deleterecord = _context.Sellers.Find(id);
             if (deleterecord == null)
             {
                 return NotFound();
             }
-            _context.Buyers.Remove(deleterecord);
+            _context.Sellers.Remove(deleterecord);
             _context.SaveChanges();
             TempData["ResultOk"] = "Data Deleted Successfully!";
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
     }
 }

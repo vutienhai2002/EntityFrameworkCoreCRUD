@@ -15,6 +15,7 @@ namespace EntityFrameworkCoreCRUD.Service
         {
             return _context.Users.Any(u => u.username == username);
         }
+
         public User CheckUsernamePassword(string username, string password)
 		{
 			return _context.Users.FirstOrDefault(u => u.username == username && u.password ==password);

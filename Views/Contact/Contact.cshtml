@@ -45,7 +45,7 @@
         <div class="offcanvas__widget">
             <a href="#"><i class="fa fa-cart-plus"></i></a>
             <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-            <a href="#" class="primary-btn">Add Car</a>
+            <a href="/Cart/ListCart" class="primary-btn"> List Cart </a>
         </div>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="~/image/logo.png" alt=""></a>
@@ -167,10 +167,10 @@
                         </nav>
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
-                                <a href="#"><i class="fa fa-cart-plus"></i></a>
                                 <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
                             </div>
-                            <a href="/Buycar/Buycar" class="primary-btn">Add Car</a>
+                            <a href="/Cart/ListCart" class="primary-btn"> List Cart </a>
+
                         </div>
                     </div>
                 </div>
@@ -200,6 +200,12 @@
     <!-- Breadcrumb Begin -->
     <!-- Contact Section Begin -->
     <section class="contact spad">
+        @if (TempData["ResultOk"] != null) // Kiểm tra TempData có thông báo không
+        {
+            <div class="alert alert-success" role="alert" style="margin-left: 1200px;">
+                @TempData["ResultOk"]
+            </div>
+        }
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
@@ -219,21 +225,21 @@
                     <div class="contact__form">
                         <form action="/Contact/AddContact">
                             
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Name" name="Name">
-                                </div>
-                                  <div class="col-lg-6">
+@*                                 <div class="col-lg-6">
+ *@                                    <input type="text" placeholder="Name" name="Name">
+                                @* </div>
+                                  <div class="col-lg-6"> *@
                                     <input type="text" placeholder="Address" name="Address">
-                                </div>  
-                                <div class="col-lg-6">
+                               @*  </div>  
+                                <div class="col-lg-6"> *@
                                     <input type="text" placeholder="Phone" name="Phone">
-                                </div>
-                                <div class="col-lg-6">
+                               @*  </div>
+                                <div class="col-lg-6"> *@
                                     <input type="text" placeholder="Email" name="Email">
-                                </div>
-                                <div class="col-lg-6">
+                               @*  </div>
+                                <div class="col-lg-6"> *@
                                 <input type="text" placeholder="Message" name="Message">
-                                </div>
+                              @*   </div> *@
                             
                             <input type="submit" value="Send require" class="btn btn-danger" />
                         </form>
@@ -372,21 +378,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer__brand">
-                        <h5>Top Brand</h5>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Abarth</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Acura</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Audi</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> BMW</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Ferrari</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
-                        </ul>
+                        <h5>Maps</h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0346767787887!2d105.77835920904023!3d21.030641970303307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454bab8c5e73b%3A0x15f3308da6ba66c4!2zTeG7uSDEkMOsbmggMiwgVOG7qyBMacOqbSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2sus!4v1721270257496!5m2!1svi!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </footer>

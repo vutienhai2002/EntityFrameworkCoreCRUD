@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using EntityFrameworkCoreCRUD.Data;
 using EntityFrameworkCoreCRUD.Models;
+using static System.Net.Mime.MediaTypeNames;
+using Microsoft.EntityFrameworkCore;
 
 namespace EntityFrameworkCoreCRUD.Controllers
 {
@@ -18,20 +20,35 @@ namespace EntityFrameworkCoreCRUD.Controllers
             _hostEnvironment = hostEnvironment;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
+            const int PageSize = 5; // Number of items per page
+
             if (HttpContext.Session.GetString("Username") != null)
             {
                 var username = HttpContext.Session.GetString("Username");
                 ViewBag.Username = username;
-                List<Car> carList = _context.Cars.ToList();
-            return View(carList);
+
+                var totalCars = _context.Cars.Count();
+                var totalPages = (int)Math.Ceiling(totalCars / (double)PageSize);
+                var cars = _context.Cars
+                                    .OrderBy(c => c.CarId) // Optional: Order by some property
+                                    .Skip((page - 1) * PageSize)
+                                    .Take(PageSize)
+                                    .ToList();
+
+                ViewBag.CurrentPage = page;
+                ViewBag.TotalPages = totalPages;
+
+                return View(cars);
             }
             else
             {
                 return RedirectToAction("Login", "User");
             }
         }
+
+
 
         public IActionResult Create()
         {
@@ -47,110 +64,168 @@ namespace EntityFrameworkCoreCRUD.Controllers
             }
         }
 
-        public IActionResult CreateCar(Carmodel carObj )
+        public IActionResult CreateCar(Carmodel carObj, IFormFile image)
         {
-            if (ModelState.IsValid)
+            var fileExtension = Path.GetExtension(image.FileName).ToLowerInvariant();
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+            if (!allowedExtensions.Contains(fileExtension))
             {
-                // Kiểm tra xem file đã được upload chưa
-
-                var car = new Car {
-                    Manufacturer = carObj.Manufacturer,
-                    Model = carObj.Model,
-                    Year = carObj.Year,
-                    Color = carObj.Color,
-                    EngineType = carObj.EngineType,
-                    Mileage = carObj.Mileage,
-                    Price = carObj.Price,
-                    Img = carObj.Img,
-
-                };
-
-                _context.Cars.Add(car);
-                _context.SaveChanges();
-
-                TempData["ResultOk"] = "Record Added Successfully!";
-                return RedirectToAction("Index", "Car");
+                return RedirectToAction("Index");
             }
+            // Ensure unique file name
+            var uniqueFileName = Guid.NewGuid().ToString() + fileExtension;
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", uniqueFileName);
+            // Create directory if it doesn't exist
+            var directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+            try
+            {
+                // Save the file
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                     image.CopyTo(stream);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle file saving exceptions
+                // Optionally log the error and return an appropriate view
+                return RedirectToAction("Error", "Home");
+            }
+            var relativePath = Path.Combine("images", uniqueFileName).Replace("\\", "/");
+            var car = new Car
+            {
+                Manufacturer = carObj.Manufacturer,
+                Model = carObj.Model,
+                Year = carObj.Year,
+                Color = carObj.Color,
+                EngineType = carObj.EngineType,
+                Mileage = carObj.Mileage,
+                Price = carObj.Price,
+                Img = relativePath,
+            };
+            // Save the car object to the database
+            _context.Cars.Add(car);
+            _context.SaveChanges();
+            TempData["ResultOk"] = "Car created successfully!";
 
-            // Nếu trạng thái mô hình không hợp lệ, hãy trả về chế độ xem có lỗi xác thực         
-            return RedirectToAction("create", "Car");
-
+            return RedirectToAction("index", "Car");
         }
 
-        public IActionResult Edit(int? id)
+
+
+        public IActionResult Edit(int id)
         {
             if (HttpContext.Session.GetString("Username") != null)
             {
                 var username = HttpContext.Session.GetString("Username");
                 ViewBag.Username = username;
-                if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            var carFromDb = _context.Cars.Find(id);
-            if (carFromDb == null)
-            {
-                return NotFound();
-            }
-            return View(carFromDb);
+                var car = _context.Cars.Find(id);
+                return View(car);
             }
             else
             {
                 return RedirectToAction("Login", "User");
             }
         }
-            
-        
-        public IActionResult EditCar(Carmodel carObj)
+
+        [HttpPost]
+        public async Task<IActionResult> EditCar(Car carObj, IFormFile image)
         {
-            if (ModelState.IsValid)
+
+            var fileExtension = Path.GetExtension(image.FileName).ToLowerInvariant();
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+            if (!allowedExtensions.Contains(fileExtension))
             {
-                var car = new Car
+                return RedirectToAction("Index");
+            }
+            // Ensure unique file name
+            var uniqueFileName = Guid.NewGuid().ToString() + fileExtension;
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", uniqueFileName);
+            // Create directory if it doesn't exist
+            var directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+            try
+            {
+                // Save the file
+                using (var stream = new FileStream(path, FileMode.Create))
                 {
-                    Manufacturer = carObj.Manufacturer,
-                    Model = carObj.Model,
-                    Year = carObj.Year,
-                    Color = carObj.Color,
-                    EngineType = carObj.EngineType,
-                    Mileage = carObj.Mileage,
-                    Price = carObj.Price,
-                    Img = carObj.Img,
-
-                };
-                _context.Cars.Update(car);
-                _context.SaveChanges();
-                TempData["ResultOk"] = "Data Updated Successfully!";
-                return RedirectToAction(nameof(Index));
+                    image.CopyTo(stream);
+                }
             }
-            return View(carObj);
-        }
-
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
+            catch (Exception ex)
             {
-                return NotFound();
+                // Handle file saving exceptions
+                // Optionally log the error and return an appropriate view
+                return RedirectToAction("Error", "Home");
             }
-            var carFromDb = _context.Cars.Find(id);
-            if (carFromDb == null)
+            var relativePath = Path.Combine("images", uniqueFileName).Replace("\\", "/");
+
+           
+            var carFromDb = _context.Cars.Find(carObj.CarId);
+            if (!string.IsNullOrEmpty(carFromDb.Img))
             {
-                return NotFound();
+                DeleteImage(carFromDb.Img);
             }
-            return View(carFromDb);
-        }
+            carFromDb.Manufacturer = carObj.Manufacturer;
+            carFromDb.Model = carObj.Model;
+            carFromDb.Year = carObj.Year;
+            carFromDb.Color = carObj.Color;
+            carFromDb.EngineType = carObj.EngineType;
+            carFromDb.Mileage = carObj.Mileage;
+            carFromDb.Price = carObj.Price;
+            carFromDb.Img = relativePath;
 
-      
-        public IActionResult DeleteCar(int id)
-        {
-
-            var empfromdb = _context.Cars.Find(id);
-
-            _context.Cars.Remove(empfromdb);
+            _context.Cars.Update(carFromDb);
             _context.SaveChanges();
-            TempData["ResultOk"] = "Data Deleted Successfully!";
-            return RedirectToAction(nameof(Index));
+            
 
+            return RedirectToAction("Index");
         }
+
+       
+        private bool DeleteImage(string imagePath)
+        {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imagePath);
+            if (System.IO.File.Exists(path))
+            {
+                try
+                {
+                    System.IO.File.Delete(path);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        public async Task<IActionResult> DeleteCar(int id)
+        {
+            
+                var carFromDb = _context.Cars.Find(id);
+                
+                if (!string.IsNullOrEmpty(carFromDb.Img))
+                {
+                    DeleteImage(carFromDb.Img);
+                }
+                _context.Cars.Remove(carFromDb);
+                _context.SaveChanges();
+                TempData["ResultOk"] = "Data Deleted Successfully!";
+                return RedirectToAction(nameof(Index));
+           
+        }
+      
+      
+      
         public IActionResult Viewcar()
         {
             List<Car> carList = _context.Cars.ToList();
@@ -182,7 +257,20 @@ namespace EntityFrameworkCoreCRUD.Controllers
             // Redirect to the login page or home page
             return RedirectToAction("Login", "User");
         }
+        public async Task<IActionResult> CarDetails(int id)
+        {
+            var car = await _context.Cars
+                .FirstOrDefaultAsync(c => c.CarId == id);
+
+            if (car == null)
+            {
+                return NotFound();
+            }
+
+            return View(car);
+        }
     }
+
 
 
 }

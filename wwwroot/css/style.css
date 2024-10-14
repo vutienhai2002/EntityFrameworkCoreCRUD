@@ -40,18 +40,14 @@ body {
 }
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    color: #111111;
+    color: #941313;
     font-weight: 400;
     font-family: "Lato", sans-serif;
 }
 
+/* Specific font sizes for headers */
 h1 {
     font-size: 70px;
 }
@@ -74,6 +70,7 @@ h5 {
 
 h6 {
     font-size: 16px;
+    text-align: center;
 }
 
 p {
@@ -1072,7 +1069,104 @@ ol {
             margin-right: 0;
         }
 
+
+.car__item__text__inner {
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử con theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa văn bản */
+}
+
+    /*.car__item__text__inner ul {
+        padding-left: 0;
+        list-style-type: none;*/ /* Loại bỏ gạch đầu dòng */
+        /*display: grid;*/ /* Sử dụng CSS Grid để chia thành cột và hàng */
+        /*grid-template-columns: repeat(3, 1fr);*/ /* 2 cột có độ rộng bằng nhau */
+        /*grid-gap: 12px;*/ /* Khoảng cách giữa các ô */
+        /*margin: 0;
+        width: 100%;*/ /* Đảm bảo danh sách chiếm toàn bộ chiều rộng */
+    /*}
+
+        .car__item__text__inner ul li {
+            display: flex;
+            justify-content: space-between;*/ /* Căn chỉnh các phần tử trong mỗi mục */
+            /*padding: 5px 0;*/ /* Khoảng cách giữa các mục */
+        /*}*/
+    /* Định dạng cho danh sách trong car__item__text__inner */
+    .car__item__text__inner ul {
+        padding-left: 0;
+        list-style-type: none; /* Loại bỏ gạch đầu dòng */
+        display: grid; /* Sử dụng CSS Grid để chia thành cột và hàng */
+        grid-template-columns: repeat(2, 1fr); /* 2 cột có độ rộng bằng nhau */
+        grid-gap: 12px; /* Khoảng cách giữa các ô */
+        margin: 0;
+        width: 100%; /* Đảm bảo danh sách chiếm toàn bộ chiều rộng */
+    }
+
+        /* Định dạng cho mỗi mục trong danh sách */
+        .car__item__text__inner ul li {
+            display: flex;
+            justify-content: space-between; /* Căn chỉnh các phần tử trong mỗi mục */
+            padding: 5px 0; /* Khoảng cách giữa các mục */
+            font-size: 0.9rem; /* Kích thước fo
+
+
+    .car__item__text__inner span {
+        font-weight: bold; /* Đậm cho các giá trị */
+            margin-right: 5px; /* Khoảng cách giữa giá trị và mô tả */
+        }
+
+.car__item {
+    display: grid;
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.car__item__pic__slider img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của phần tử cha */
+}
+
 .car__item__text {
+    padding: 0 15px; /* Khoảng cách bên trong */
+}
+
+.label-date {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.car__item__text ul {
+    padding-left: 0;
+    list-style-type: none; /* Loại bỏ gạch đầu dòng */
+    display: grid; /* Sử dụng CSS Grid để chia thành cột và hàng */
+    grid-template-columns: repeat(2, 1fr); /* 2 cột có độ rộng bằng nhau */
+    grid-gap: 10px; /* Khoảng cách giữa các ô */
+}
+
+    .car__item__text ul li {
+        display: flex;
+        justify-content: space-between; /* Căn chỉnh các phần tử trong mỗi mục */
+        padding: 5px 0; /* Khoảng cách giữa các mục */
+    }
+
+.car__item__text span {
+    font-weight: bold; /* Đậm cho các giá trị */
+    margin-right: 14px; /* Khoảng cách giữa giá trị và mô tả */
+}
+
+.car__item__price {
+    margin-top: 10px; /* Khoảng cách giữa phần giá và danh sách */
+}
+
+
+
+
+
+/*.car__item__text {
     border: 1px solid #ebebeb;
 }
 
@@ -1130,35 +1224,72 @@ ol {
 
             .car__item__text__inner ul li:last-child:after {
                 display: none;
-            }
+            }*/
 
 .car__item__price {
     position: relative;
+
 }
 
-    .car__item__price .car-option {
-        font-size: 15px;
+    /*.car__item__price .car-option {
+    font-size: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    background: #4971FF;
+    padding: 12px 22px 10px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;*/ /* Khoảng cách giữa các liên kết */
+    /*position: relative;*/ /* Đặt lại thành relative để không bị chồng lên nhau */
+/*}
+
+
+    .car__item__price .price-tag {
+        font-size: 10px;
+        color: #ffffff;*/ /* Màu chữ trắng */
+        /*background-color: #FF0000;*/ /* Nền đỏ */
+        /*padding: 12px 22px 10px;
+        border-radius: 2px;
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 10px;*/ /* Khoảng cách phía trên */
+        /*text-align: center;*/ /* Căn giữa văn bản */
+
+    /*}*/
+    .car__item__price .car-option,
+    .car__item__price .price-tag {
+        font-size: 10px;
         color: #ffffff;
         font-weight: 700;
-        background: #4971FF;
-        display: inline-block;
+        font-weight: bold; /* Chữ đậm */
+
         padding: 12px 22px 10px;
-        border-radius: 2px 0 0 2px;
-        position: absolute;
-        left: 0;
-        top: 0;
+        border-radius: 2px;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px; /* Khoảng cách giữa các phần tử */
+        background: #4971FF; /* Nền xanh cho .car-option */
+        position: relative; /* Đặt lại thành relative để không bị chồng lên nhau */
     }
 
-        .car__item__price .car-option.sale {
-            background: #db2d2e;
-        }
+    .car__item__price .price-tag {
+        background-color: #e81f1f; /* Nền đỏ cho price-tag */
+        margin-right: 0; /* Bỏ khoảng cách phải để căn đều */
+    }
+
+
+
+.car__item__price .car-option.sale {
+    background: #db2d2e;
+}
 
     .car__item__price h6 {
         font-size: 15px;
         color: #db2d2e;
         font-weight: 700;
         border-top: 1px solid #ebebeb;
-        padding-left: 120px;
+        /*padding-left: 120px;*/
         padding-top: 14px;
         padding-bottom: 11px;
     }
@@ -3053,7 +3184,7 @@ ol {
     width: 100%;
     height: 46px;
     font-size: 15px;
-    color: #727171;
+    color: #000;
     border-radius: 2px;
     padding-left: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -3828,7 +3959,8 @@ ol {
 }
 
 .panel-form-steps {
-    padding: 20px;
+/*    width: 820px;
+*/    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -3873,3 +4005,58 @@ ol {
     .steps-register .form-group .input-group-append {
         margin-left: 8px;
     }
+/* Ensure that the car items are flex items and adjust their size */
+.car__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .car__item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+.car__item__img {
+    width: 100%;
+    overflow: hidden;
+}
+
+    .car__item__img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.car__item__text {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car__item__text__inner {
+    flex: 1;
+}
+
+.car__item__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.label-date {
+    background-color: rgb(19, 206, 192);
+    padding: 5px 55px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}

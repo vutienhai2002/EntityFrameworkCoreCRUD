@@ -1,6 +1,7 @@
 ﻿using EntityFrameworkCoreCRUD.Models;
 using EntityFrameworkCoreCRUD.Service;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using static EntityFrameworkCoreCRUD.Service.BuyerService;
 
 namespace EntityFrameworkCoreCRUD.Controllers
@@ -9,10 +10,12 @@ namespace EntityFrameworkCoreCRUD.Controllers
     {
         private readonly ContactService contactService;
         private readonly BuyerService buyerService;
-        public ContactController(ContactService contactService, BuyerService buyerService)
+        private readonly CarService carService;
+        public ContactController(ContactService contactService, BuyerService buyerService , CarService carService)
         {
             this.contactService = contactService;
             this.buyerService = buyerService;   
+            this.carService = carService;
         }
         public IActionResult Contact()
         {
@@ -20,7 +23,7 @@ namespace EntityFrameworkCoreCRUD.Controllers
             return View();
         }
 
-        public IActionResult AddContact(Contact contact,Buyer buyer)
+        public IActionResult AddContact(Contact contact,Buyer buyer )
         {
             buyer.Password = "null";
             buyer.Username = "null";
@@ -28,6 +31,7 @@ namespace EntityFrameworkCoreCRUD.Controllers
             contact.BuyerId= BuyerId;
             contact.Date= DateTime.Now;
             contactService.AddContact(contact);
+            TempData["ResultOk"] = "Contact Successfully!";
             return RedirectToAction("Contact", "Contact");
         }
 
@@ -102,16 +106,44 @@ namespace EntityFrameworkCoreCRUD.Controllers
         }
 
     
-        public IActionResult EditContact(Contact contact)
+        public IActionResult EditContact(int ContactId)
         {
-            if (ModelState.IsValid)
-            {
-                contactService.UpdateContact(contact);
+            
+                Contact contact = contactService.GetContactById(ContactId);
+                Buyer buyer = buyerService.GetBuyerByIdSS(contact.BuyerId);
+                carService.GuiEmailXacMinh(contact, buyer.Email); 
                 TempData["ResultOk"] = "Contact Updated Successfully!";
                 return RedirectToAction("Index");
-            }
-            return View(contact);
+            
         }
+
+        public IActionResult Delete(int? id)
+        {
+            if (HttpContext.Session.GetString("Username") != null)
+            {
+                if (id == null || id == 0)
+                {
+                    return NotFound();
+                }
+
+                var contactFromDb = contactService.GetContactById(id.Value);
+                if (contactFromDb == null)
+                {
+                    return NotFound();
+                }
+
+                return View(contactFromDb); // Show a confirmation view
+            }
+            else
+            {
+                return RedirectToAction("Login", "User");
+            }
+        }
+
+
+        
+        
+
 
     }
 }

@@ -24,9 +24,12 @@ namespace EntityFrameworkCoreCRUD.Models
 
         [Column(TypeName = "decimal(10, 2)")]
         public decimal Price { get; set; }
-        public string Img { get; set; }
+        public string? Img { get; set; }
         public int? ContactId { get; set; }
         [ForeignKey("ContactId")]
         public Contact Contact { get; set; }
+
+        public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+
     }
 }

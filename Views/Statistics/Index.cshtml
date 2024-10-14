@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Buyer   ";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>@ViewData["Title"]</h2>
+
+        <div class="card">
+            <div class="card-body">
+                <h5>Total Buyers: @ViewBag.TotalBuyers</h5>
+                <h5>Average Age: @ViewBag.AverageAge</h5>
+
+                <h4>Buyers by City</h4>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Number of Buyers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var city in ViewBag.BuyersByCity)
+                        {
+                            <tr>
+                                <td>@city.City</td>
+                                <td>@city.Count</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

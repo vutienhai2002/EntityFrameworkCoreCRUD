@@ -3,6 +3,7 @@ using EntityFrameworkCoreCRUD.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
+
 namespace EntityFrameworkCoreCRUD.Controllers
 {
     public class BuycarController : Controller
@@ -19,14 +20,27 @@ namespace EntityFrameworkCoreCRUD.Controllers
         public IActionResult Buycar()
         {
             List<Car> cars = _carService.GetAllCars();
-            
+            List<Buyer> buyers = _buyerService.GetAllBuyers();
+
+            ViewBag.Buyers = buyers;
+
+            // Fetch the logged-in buyer
+            Buyer loggedInBuyer = null;
+            if (User.Identity.IsAuthenticated)
+            {
+                var username = User.Identity.Name; // Assuming username is the unique identifier
+                loggedInBuyer = _buyerService.GetBuyerByUsername(username);
+            }
+            ViewBag.LoggedInBuyer = loggedInBuyer;
 
             return View(cars);
         }
 
+
         public IActionResult Register(Buyer buyer)
         {
 
+        
             if (ModelState.IsValid)
             {
                 _buyerService.AddBuyer(buyer);

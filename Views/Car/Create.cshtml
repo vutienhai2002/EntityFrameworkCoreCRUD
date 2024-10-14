@@ -45,6 +45,11 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
+                    <li class="active ">
+                        <a href="/Dashboard/index">
+                            <h6>Dashboard</h6>
+                        </a>
+                    </li>
 
                     <li class="active ">
                         <a href="/car/index">
@@ -72,8 +77,8 @@
                         </a>
                     </li>
                     <li class="active ">
-                        <a href="/Transaction/index">
-                            <h6>Transaction </h6>
+                        <a href="/OrderDetail/index">
+                            <h6>OrderDetail</h6>
                         </a>
                     </li>
                 </ul>
@@ -141,17 +146,19 @@
                                                         <h4 class="card-title">Create </h4>
                                                     </div>
                                                     <div class="card-body">
-                                                        <form action="/Car/CreateCar" method="post">
+                                                        <form action="/Car/CreateCar" enctype="multipart/form-data" method="post">
                                                             <div class="form-group">
                                                                 <label>Manufacturer</label>
                                                                 <input type="text" class="form-control" name="Manufacturer" required>
                                                             </div>
+                                                            <label for="myfile">Image</label>
+                                                            <input type="file" id="image" name="image"><br><br>
                                                             <div class="form-group">
                                                                 <label>Model</label>
                                                                 <input type="text" class="form-control" name="Model" required>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label>Year</label>
+                                                                <label>Year of manufacture</label>
                                                                 <input type="number" class="form-control" name="Year" required>
                                                             </div>
                                                             <div class="form-group">
@@ -170,22 +177,10 @@
                                                                 <label>Price</label>
                                                                 <input type="number" class="form-control" name="Price" required>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label>Image</label>
-                                                                <input type="file" class="form-control-file" name="Img" accept="Image/png, Image/jpeg,Image/jpg ">
-                                                            </div>
+                                                          
 
-                                                           @*  <label for="avatar">Choose a profile picture:</label
-                                                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
- *@
-                                                          @*   <div class="form-group">
-                                                                <label asp-for="Img" class="control-label">Upload Image</label>
-                                                                  <input type="file" name="ImageFile" class="form-control" />
-                                                            </div> *@
-
-
-                                                            <button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Save</button>
-                                                            <a asp-controller="Car" asp-action="Index" class="btn btn-lg btn-warning p-2">Back To List</a>
+                                                            <button type="submit" class="btn btn-lg btn-primary p-1"><i class="bi bi-file-plus-fill"></i>Save</button>
+                                                            <a asp-controller="Car" asp-action="Index" class="btn btn-lg btn-warning p-1">Back To List</a>
                                                         </form>
                                                     </div>
                                                 </div>

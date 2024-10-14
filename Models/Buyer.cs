@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿    using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace EntityFrameworkCoreCRUD.Models
@@ -30,5 +30,7 @@ namespace EntityFrameworkCoreCRUD.Models
         [StringLength(50)] // Điều chỉnh độ dài cho phù hợp
         public string Password { get; set; }
 
+        // Điều hướng tới danh sách đơn hàng
+        public List<Order> Orders { get; set; } = new List<Order>(); // Default initialization
     }
 }

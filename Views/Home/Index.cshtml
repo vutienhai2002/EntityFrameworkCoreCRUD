@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -39,7 +40,7 @@
         <div class="offcanvas__widget">
             <a href="#"><i class="fa fa-cart-plus"></i></a>
             <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-            <a href="#" class="primary-btn">Add Car</a>
+                            <a href="/Cart/ListCart" class="primary-btn"> List Cart </a>
         </div>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
@@ -49,17 +50,17 @@
             <i class="bi bi-clock"></i>
             <li><i class="bi bi-clock"></i></i> Week day: 08:00 am to 18:00 pm</li>
             <li>
-                <i class="fa fa-envelope-o"></i> 
+                <i class="fa fa-envelope-o"></i>
                 if (ViewBag.Username != null)
                 {
-                    <p>Hello, @ViewBag.Username!</p>
+                <p>Hello, @ViewBag.Username!</p>
                 }
                 else
                 {
-                    <p>Login.</p>
+                <p>Login.</p>
                 }
             </li>
-        </ul> 
+        </ul>
 
 
 
@@ -124,7 +125,7 @@
                         <nav class="header__menu">
                             <ul>
                                 <li class="active"><a href="./Index">Home</a></li>
-                                
+
                                 <li><a href="/Car/viewcar">Cars</a></li>
                                 <li><a href="/Blog/Blog">Blog</a></li>
                                 <li>
@@ -141,10 +142,10 @@
                         </nav>
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
-@*                                 <a href="#"><i class="fa fa-cart-plus"></i></a>
- *@                                <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+                                @*                                 <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                *@                                <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
                             </div>
-                            <a href="/Buycar/Buycar" class="primary-btn">Add Car</a>
+                            <a href="/Cart/ListCart" class="primary-btn"> List Cart </a>
                         </div>
                     </div>
                 </div>
@@ -157,7 +158,7 @@
     <!-- Header Section End -->
     <!-- Hero Section Begin -->
     <section class="hero spad set-bg" data-setbg="../Image/hero-bg.jpg">
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
@@ -174,148 +175,149 @@
                         <a href="#" class="primary-btn more-btn">Learn More</a>
                     </div>
                 </div>
-@*                 <div class="col-lg-5">
-                    <div class="hero__tab">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Car Rental</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Buy Car</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                <div class="hero__tab__form">
-                                    <h2>Find Your Dream Car</h2>
-                                    <form>
-                                        <div class="select-list">
-                                            <div class="select-list-item">
-                                                <p>Select Year</p>
-                                                <select>
-                                                    <option data-display=" ">Select Year</option>
-                                                    <option value="">2020</option>
-                                                    <option value="">2019</option>
-                                                    <option value="">2018</option>
-                                                    <option value="">2017</option>
-                                                    <option value="">2016</option>
-                                                    <option value="">2015</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
-                                                <p>Select Brand</p>
-                                                <select>
-                                                    <option data-display=" ">Select Brand</option>
-                                                    <option value="">Acura</option>
-                                                    <option value="">Audi</option>
-                                                    <option value="">Bentley</option>
-                                                    <option value="">BMW</option>
-                                                    <option value="">Bugatti</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
-                                                <p>Select Model</p>
-                                                <select>
-                                                    <option data-display=" ">Select Model</option>
-                                                    <option value="">Q3</option>
-                                                    <option value="">A4 </option>
-                                                    <option value="">AVENTADOR</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
-                                                <p>Select Mileage</p>
-                                                <select>
-                                                    <option data-display=" ">Select Mileage</option>
-                                                    <option value="">27</option>
-                                                    <option value="">25</option>
-                                                    <option value="">15</option>
-                                                    <option value="">10</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="car-price">
-                                            <p>Price Range:</p>
-                                            <div class="price-range-wrap">
-                                                <div class="price-range"></div>
-                                                <div class="range-slider">
-                                                    <div class="price-input">
-                                                        <input type="text" id="amount">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="site-btn">Searching</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <div class="hero__tab__form">
-                                    <h2>Buy Your Dream Car</h2>
-                                    <form>
-                                        <div class="select-list">
-                                            <div class="select-list-item">
-                                                <p>Select Year</p>
-                                                <select>
-                                                    <option data-display=" ">Select Year</option>
-                                                    <option value="">2020</option>
-                                                    <option value="">2019</option>
-                                                    <option value="">2018</option>
-                                                    <option value="">2017</option>
-                                                    <option value="">2016</option>
-                                                    <option value="">2015</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
-                                                <p>Select Brand</p>
-                                                <select>
-                                                    <option data-display=" ">Select Brand</option>
-                                                    <option value="">Acura</option>
-                                                    <option value="">Audi</option>
-                                                    <option value="">Bentley</option>
-                                                    <
-                                                    <option value="">BMW</option>
-                                                    <option value="">Bugatti</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
-                                                <p>Select Model</p>
-                                                <select>
-                                                    <option data-display=" ">Select Model</option>
-                                                    <option value="">Q3</option>
-                                                    <option value="">A4 </option>
-                                                    <option value="">AVENTADOR</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
-                                                <p>Select Mileage</p>
-                                                <select>
-                                                    <option data-display=" ">Select Mileage</option>
-                                                    <option value="">27</option>
-                                                    <option value="">25</option>
-                                                    <option value="">15</option>
-                                                    <option value="">10</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="car-price">
-                                            <p>Price Range:</p>
-                                            <div class="price-range-wrap">
-                                                <div class="price-range"></div>
-                                                <div class="range-slider">
-                                                    <div class="price-input">
-                                                        <input type="text" id="amount">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="site-btn">Searching</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                @*                 <div class="col-lg-5">
+                <div class="hero__tab">
+                <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Car Rental</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Buy Car</a>
+                </li>
+                </ul>
+                <div class="tab-content">
+                <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                <div class="hero__tab__form">
+                <h2>Find Your Dream Car</h2>
+                <form>
+                <div class="select-list">
+                <div class="select-list-item">
+                <p>Select Year</p>
+                <select>
+                <option data-display=" ">Select Year</option>
+                <option value="">2020</option>
+                <option value="">2019</option>
+                <option value="">2018</option>
+                <option value="">2017</option>
+                <option value="">2016</option>
+                <option value="">2015</option>
+                </select>
                 </div>
- *@            </div>
+                <div class="select-list-item">
+                <p>Select Brand</p>
+                <select>
+                <option data-display=" ">Select Brand</option>
+                <option value="">Acura</option>
+                <option value="">Audi</option>
+                <option value="">Bentley</option>
+                <option value="">BMW</option>
+                <option value="">Bugatti</option>
+                </select>
+                </div>
+                <div class="select-list-item">
+                <p>Select Model</p>
+                <select>
+                <option data-display=" ">Select Model</option>
+                <option value="">Q3</option>
+                <option value="">A4 </option>
+                <option value="">AVENTADOR</option>
+                </select>
+                </div>
+                <div class="select-list-item">
+                <p>Select Mileage</p>
+                <select>
+                <option data-display=" ">Select Mileage</option>
+                <option value="">27</option>
+                <option value="">25</option>
+                <option value="">15</option>
+                <option value="">10</option>
+                </select>
+                </div>
+                </div>
+                <div class="car-price">
+                <p>Price Range:</p>
+                <div class="price-range-wrap">
+                <div class="price-range"></div>
+                <div class="range-slider">
+                <div class="price-input">
+                <input type="text" id="amount">
+                </div>
+                </div>
+                </div>
+                </div>
+                <button type="submit" class="site-btn">Searching</button>
+                </form>
+                </div>
+                </div>
+                <div class="tab-pane" id="tabs-2" role="tabpanel">
+                <div class="hero__tab__form">
+                <h2>Buy Your Dream Car</h2>
+                <form>
+                <div class="select-list">
+                <div class="select-list-item">
+                <p>Select Year</p>
+                <select>
+                <option data-display=" ">Select Year</option>
+                <option value="">2020</option>
+                <option value="">2019</option>
+                <option value="">2018</option>
+                <option value="">2017</option>
+                <option value="">2016</option>
+                <option value="">2015</option>
+                </select>
+                </div>
+                <div class="select-list-item">
+                <p>Select Brand</p>
+                <select>
+                <option data-display=" ">Select Brand</option>
+                <option value="">Acura</option>
+                <option value="">Audi</option>
+                <option value="">Bentley</option>
+                <
+                <option value="">BMW</option>
+                <option value="">Bugatti</option>
+                </select>
+                </div>
+                <div class="select-list-item">
+                <p>Select Model</p>
+                <select>
+                <option data-display=" ">Select Model</option>
+                <option value="">Q3</option>
+                <option value="">A4 </option>
+                <option value="">AVENTADOR</option>
+                </select>
+                </div>
+                <div class="select-list-item">
+                <p>Select Mileage</p>
+                <select>
+                <option data-display=" ">Select Mileage</option>
+                <option value="">27</option>
+                <option value="">25</option>
+                <option value="">15</option>
+                <option value="">10</option>
+                </select>
+                </div>
+                </div>
+                <div class="car-price">
+                <p>Price Range:</p>
+                <div class="price-range-wrap">
+                <div class="price-range"></div>
+                <div class="range-slider">
+                <div class="price-input">
+                <input type="text" id="amount">
+                </div>
+                </div>
+                </div>
+                </div>
+                <button type="submit" class="site-btn">Searching</button>
+                </form>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                *@
+            </div>
         </div>
     </section>
     <!-- Hero Section End -->
@@ -407,7 +409,8 @@
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2016</div>
-                                <h5><a href="#">Porsche cayenne turbo s</a></h5>
+                                <h5 class="car-option">Porsche cayenne turbo</h5>
+
                                 <ul>
                                     <li><span>35,000</span> mi</li>
                                     <li>Auto</li>
@@ -432,7 +435,7 @@
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2020</div>
-                                <h5><a href="#">Toyota camry asv50l-jeteku</a></h5>
+                                <h5 class="car-option">Toyota camry asv50l-jeteku</h5>
                                 <ul>
                                     <li><span>35,000</span> mi</li>
                                     <li>Auto</li>
@@ -449,7 +452,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                                                      <img src="~/image/cars/car-3.jpg" alt="">
+                            <img src="~/image/cars/car-3.jpg" alt="">
                             <img src="~/image/cars/car-8.jpg" alt="">
                             <img src="~/image/cars/car-6.jpg" alt="">
                             <img src="~/image/cars/car-5.jpg" alt="">
@@ -458,7 +461,7 @@
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2017</div>
-                                <h5><a href="#">Bmw s1000rr 2019 m</a></h5>
+                                <h5 class ="car-option">Bmw s1000rr 2019 </h5>
                                 <ul>
                                     <li><span>35,000</span> mi</li>
                                     <li>Auto</li>
@@ -484,7 +487,7 @@
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2019</div>
-                                <h5><a href="#">Lamborghini huracan evo</a></h5>
+                                <h5 class="car-option">Lamborghini huracan </h5>
                                 <ul>
                                     <li><span>35,000</span> mi</li>
                                     <li>Auto</li>
@@ -510,7 +513,7 @@
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2018</div>
-                                <h5><a href="#">Audi q8 2020</a></h5>
+                                <h5 class="car-option" ">Audi q8 2020</h5>
                                 <ul>
                                     <li><span>35,000</span> mi</li>
                                     <li>Auto</li>
@@ -527,7 +530,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="~/image/cars/car-6.jpg" alt="">
+                            <img src="~/image/cars/car-5.jpg" alt="">
                             <img src="~/image/cars/car-8.jpg" alt="">
                             <img src="~/image/cars/car-3.jpg" alt="">
                             <img src="~/image/cars/car-1.jpg" alt="">
@@ -536,7 +539,7 @@
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2016</div>
-                                <h5><a href="#">Mustang shelby gt500</a></h5>
+                                <h5 class="car-option">Mustang shelby gt500</h5>
                                 <ul>
                                     <li><span>35,000</span> mi</li>
                                     <li>Auto</li>
@@ -553,7 +556,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                                                       <img src="~/image/cars/car-7.jpg" alt="">
+                            <img src="~/image/cars/car-7.jpg" alt="">
                             <img src="~/image/cars/car-2.jpg" alt="">
                             <img src="~/image/cars/car-4.jpg" alt="">
                             <img src="~/image/cars/car-1.jpg" alt="">
@@ -562,7 +565,7 @@
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2020</div>
-                                <h5><a href="#">Lamborghini aventador A90</a></h5>
+                                <h5 class="car-option">Lamborghini aventador A90</h5>
                                 <ul>
                                     <li><span>35,000</span> mi</li>
                                     <li>Auto</li>
@@ -588,7 +591,7 @@
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
                                 <div class="label-date">2017</div>
-                                <h5><a href="#">Porsche cayenne turbo s</a></h5>
+                                <h5 class="car-option">Porsche cayenne turbo </h5>
                                 <ul>
                                     <li><span>35,000</span> mi</li>
                                     <li>Auto</li>
@@ -652,7 +655,7 @@
                     <div class="section-title">
                         <span>Our Blog</span>
                         <h2>Latest News Updates</h2>
-                        <p> 
+                        <p>
                             Sign up for the latest Automobile Industry information and more. Duis aute<br /> irure
                             dolorin reprehenderits volupta velit dolore fugiat.
                         </p>
@@ -663,7 +666,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="latest__blog__item">
                         <div class="latest__blog__item__pic set-bg" data-setbg="Image/latest-blog/lb-1.jpg">
-                            
+
                             <ul>
                                 <li>By Polly Williams</li>
                                 <li>Dec 19, 2018</li>
@@ -746,7 +749,7 @@
     </div>
     <!-- Cta End -->
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="../Image/footer-bg.jpg"> 
+    <footer class="footer set-bg" data-setbg="../Image/footer-bg.jpg">
         <div class="container">
             <div class="footer__contact">
                 <div class="row">
@@ -791,7 +794,7 @@
                             <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Payemnt</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
-                           <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
                         </ul>
                     </div>
                 </div>
@@ -844,7 +847,7 @@
     </div>
     <!-- Search End -->
     <!-- Js Plugins -->
- 
+
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/jquery.nice-select.min.js"></script>

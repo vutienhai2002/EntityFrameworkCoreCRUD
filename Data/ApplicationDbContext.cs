@@ -15,7 +15,8 @@ namespace EntityFrameworkCoreCRUD.Data
         public DbSet<Car> Cars { get; set; }
         public DbSet<Buyer> Buyers { get; set; }
         public DbSet<Seller> Sellers { get; set; }
-        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
 
 

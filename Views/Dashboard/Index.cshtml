@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Paper Dashboard 2 by Creative Tim
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <link href="~/css/paper-dashboard.css" rel="stylesheet" />
+    <link href="~/css/paper-dashboard.min.css" rel="stylesheet" />
+    <a href="~/css/paper-dashboard.css.map">~/css/paper-dashboard.css.map</a>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <a href="~/css/bootstrap.min.css.map"></a>
+    <link href="~/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body class="">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="white" data-active-color="danger">
+            <div class="logo">
+                <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+                    <div class="logo-image-small">
+                    </div>
+                    <img src="~/image/logo.png" />
+                </a>
+                <a class="simple-text logo-normal">
+                    CITYZENS
+
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+
+                    <li class="active ">
+                        <a href="/Dashboard/index">
+                            <h6>Dashboard</h6>
+                        </a>
+                    </li>
+
+                    <li class="active ">
+                        <a href="/car/index">
+                            <h6>Car</h6>
+                        </a>
+                    </li>
+                    @*  <li class="active ">
+                    <a href="/Employee/index">
+                    <h6>Employee</h6>
+                    </a>
+                    </li> *@
+                    <li class="active ">
+                        <a href="/Buyer/index">
+                            <h6>Buyer</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
+                        <a href="/Seller/index">
+                            <h6>Seller</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
+                        <a href="/Contact/index">
+                            <h6>Contact</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
+                        <a href="/OrderDetail/index">
+                            <h6>OrderDetail</h6>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-toggle">
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" href="javascript:;"> Dashboard </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <form>
+                            <div class="input-group no-border">
+                                <input type="text" value="" class="form-control" placeholder="Search...">
+
+                            </div>
+                        </form>
+
+
+                        <ul class="navbar-nav">
+                            <li>
+                                @if (ViewBag.Username != null)
+                                {
+                                    <p>Hello, @ViewBag.Username!</p>
+                                    <form action="/User/Login" method="post" style="display: inline;">
+                                        <button type="submit" class="logout-button">Logout</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <p>You are not logged in.</p>
+                                }
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                            <i class="fas fa-chart-line text-warning"></i> <!-- Using Font Awesome icon -->
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                            <p class="card-category">Total Amount</p>
+                                            <p class="card-title">@String.Format("{0:C}", ViewData["doanhthu"])</p> <!-- Note: Closed <p> tag -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer ">
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-refresh"></i>
+                                    Update Now
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                            <i class="fas fa-car text-success"></i> <!-- Using Font Awesome car icon -->
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                            <p class="card-category">Car Count</p>
+                                            <p class="card-title">@ViewData["tongsoluongxe"]</p> <!-- Closed <p> tag properly -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer ">
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-calendar-o"></i>
+                                    Last day
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                            <i class="fas fa-user-friends text-danger"></i> <!-- Using Font Awesome user icon -->
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                            <p class="card-category">Customer Count</p>
+                                            <p class="card-title">@ViewData["tongsoluongkhachhang"]</p> <!-- Correctly closed <p> tag -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer ">
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-clock-o"></i>
+                                    In the last hour
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                            <i class="fas fa-shopping-cart text-primary"></i> <!-- Using Font Awesome shopping cart icon -->
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                            <p class="card-category">Order Count</p>
+                                            <p class="card-title">@ViewData["tongsoluongorder"]</p> <!-- Correctly closed <p> tag -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer ">
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-refresh"></i>
+                                    Update now
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card ">
+                            <div class="card-header ">
+                                <h5 class="card-title">Email Statistics</h5>
+                                <p class="card-category">Last Campaign Performance</p>
+                            </div>
+                            <div class="card-body ">
+                                <canvas id="myPieChart"></canvas>
+                            </div>
+                            <div class="card-footer ">
+                                <div class="legend">
+                                    <i class="fa fa-circle text-primary"></i> Opened
+                                    <i class="fa fa-circle text-warning"></i> Read
+                                    <i class="fa fa-circle text-danger"></i> Deleted
+                                    <i class="fa fa-circle text-gray"></i> Unopened
+                                </div>
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-calendar"></i> Number of emails sent
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card card-chart">
+                            <div class="card-header">
+                                <h5 class="card-title">NASDAQ: AAPL</h5>
+                                <p class="card-category">Line Chart with Points</p>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="myLineChart" width="400" height="100"></canvas>
+                            </div>
+                            <div class="card-footer">
+                                <div class="chart-legend">
+                                    <i class="fa fa-circle text-info"></i> Tesla Model S
+                                    <i class="fa fa-circle text-warning"></i> BMW 5 Series
+                                </div>
+                                <hr />
+                                <div class="card-stats">
+                                    <i class="fa fa-check"></i> Data information certified
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="https://www.creative-tim.com" target="_blank">Creative Tim</a></li>
+                                <li><a href="https://www.creative-tim.com/blog" target="_blank">Blog</a></li>
+                                <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
+                            </ul>
+                        </nav>
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                © <script>
+                                      document.write(new Date().getFullYear())
+                                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chart JS -->
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+    <script src="../assets/demo/demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+            demo.initChartsPages();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Hàm để lấy dữ liệu từ API
+            function fetchCarPercentages() {
+                $.ajax({
+                    url: '/Dashboard/TongPhanTramsanPham', // Đường dẫn đến API của bạn
+                    method: 'GET',
+                    success: function (data) {
+                        drawPieChart(data);
+                    },
+                    error: function (error) {
+                        console.error("Có lỗi xảy ra khi lấy dữ liệu:", error);
+                    }
+                });
+            }
+
+            // Hàm tạo màu ngẫu nhiên
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            // Hàm để vẽ biểu đồ
+            function drawPieChart(data) {
+                const labels = data.map(item => item.car.manufacturer);
+                const dataValues = data.map(item => item.toangdoanhthu);
+
+                // Tạo mảng màu ngẫu nhiên cho từng phần
+                const backgroundColors = data.map(() => getRandomColor());
+
+                const ctx = document.getElementById('myPieChart').getContext('2d');
+                const myPieChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Doanh thu theo xe',
+                            data: dataValues,
+                            backgroundColor: backgroundColors, // Sử dụng màu nền ngẫu nhiên
+                            borderColor: backgroundColors.map(color => color.replace('0.2', '1')), // Biên có cùng màu với nền
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Doanh thu theo từng xe'
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Gọi hàm fetch khi trang đã sẵn sàng
+            fetchCarPercentages();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '/Dashboard/Doanhthutheothang', // Đường dẫn đến controller
+                method: 'GET',
+                success: function (data) {
+                    // Khởi tạo mảng doanh thu theo tháng
+                    var months = [
+                        "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6",
+                        "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"
+                    ];
+                    var revenues = new Array(12).fill(0); // Mảng doanh thu
+
+                    // Duyệt qua dữ liệu từ server và gán doanh thu vào mảng
+                    data.forEach(function (item) {
+                        var month = item.thang - 1; // Lấy tháng (giá trị từ 0 - 11)
+                        revenues[month] = item.tongdoanhthu; // Gán doanh thu cho tháng
+                    });
+
+                    // Tạo biểu đồ đường
+                    const ctx = document.getElementById('myLineChart').getContext('2d');
+                    const myLineChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: months, // Nhãn tháng
+                            datasets: [{
+                                label: 'Tổng doanh thu',
+                                data: revenues, // Dữ liệu doanh thu
+                                borderColor: generateRandomColor(), // Màu ngẫu nhiên cho đường
+                                fill: false,
+                                borderWidth: 2
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Tổng doanh thu (VND)'
+                                    }
+                                },
+                                x: {
+                                    title: {
+                                        display: true,
+                                        text: 'Tháng'
+                                    }
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    display: true
+                                }
+                            }
+                        }
+                    });
+                },
+                error: function (error) {
+                    console.error('Lỗi khi lấy dữ liệu doanh thu:', error);
+                    alert("Lỗi: " + error.responseText);
+                }
+            });
+        });
+
+        // Hàm tạo màu ngẫu nhiên
+        function generateRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+
+</html>

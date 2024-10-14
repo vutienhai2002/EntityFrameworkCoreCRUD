@@ -129,6 +129,10 @@
       "PackagePath": "staticwebassets\\Image\\cars\\car-8.jpg"
     },
     {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\Siêu xe Lamborghini Revuelto.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\Siêu xe Lamborghini Revuelto.jpg"
+    },
+    {
       "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-1.jpg",
       "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-1.jpg"
     },
@@ -153,6 +157,22 @@
       "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-6.jpg"
     },
     {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-7.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\cd-8.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\cd-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\lambogini.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\lambogini.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\lambor-cam.webp",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\lambor-cam.webp"
+    },
+    {
       "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\sm-1.jpg",
       "PackagePath": "staticwebassets\\Image\\cars\\details\\sm-1.jpg"
     },
@@ -171,6 +191,10 @@
     {
       "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\sm-5.jpg",
       "PackagePath": "staticwebassets\\Image\\cars\\details\\sm-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\cars\\details\\xe-dua.jpg",
+      "PackagePath": "staticwebassets\\Image\\cars\\details\\xe-dua.jpg"
     },
     {
       "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Image\\chooseus-video.png",
@@ -301,6 +325,126 @@
       "PackagePath": "staticwebassets\\Image\\wheel.png"
     },
     {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\006fbe5b-0251-4c53-b7c7-d7ab6e176df7.jpg",
+      "PackagePath": "staticwebassets\\Images\\006fbe5b-0251-4c53-b7c7-d7ab6e176df7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\0308550d-4986-485e-8144-ef4d9264c532.jpg",
+      "PackagePath": "staticwebassets\\Images\\0308550d-4986-485e-8144-ef4d9264c532.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\08375c7e-e2e4-46eb-8b32-f90529070cb7.jpg",
+      "PackagePath": "staticwebassets\\Images\\08375c7e-e2e4-46eb-8b32-f90529070cb7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\0904b1a8-c8ad-4d05-a2d8-471e7b9f3b3a.jpg",
+      "PackagePath": "staticwebassets\\Images\\0904b1a8-c8ad-4d05-a2d8-471e7b9f3b3a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\0f344a93-a67a-4c58-8d39-3231a8e76bd1.jpg",
+      "PackagePath": "staticwebassets\\Images\\0f344a93-a67a-4c58-8d39-3231a8e76bd1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\1b4c4eaf-d8bf-4cbb-be07-82a562ca0601.jpg",
+      "PackagePath": "staticwebassets\\Images\\1b4c4eaf-d8bf-4cbb-be07-82a562ca0601.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\2011b656-ad44-4bef-bdfa-8a83880abfd7.jpg",
+      "PackagePath": "staticwebassets\\Images\\2011b656-ad44-4bef-bdfa-8a83880abfd7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\20c96f9a-9578-4fdf-9646-d6f525b7d92d.jpg",
+      "PackagePath": "staticwebassets\\Images\\20c96f9a-9578-4fdf-9646-d6f525b7d92d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\2210d867-1d37-4af2-b3d3-78bbb79819af.jpg",
+      "PackagePath": "staticwebassets\\Images\\2210d867-1d37-4af2-b3d3-78bbb79819af.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\30bb9f0e-c5e9-42af-bdf7-152807e5a583.jpg",
+      "PackagePath": "staticwebassets\\Images\\30bb9f0e-c5e9-42af-bdf7-152807e5a583.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\40bb1b54-17eb-4ccb-8e32-e98c49bf0b14.jpg",
+      "PackagePath": "staticwebassets\\Images\\40bb1b54-17eb-4ccb-8e32-e98c49bf0b14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\46012556-9093-4c38-af7f-825290db83f2.jpg",
+      "PackagePath": "staticwebassets\\Images\\46012556-9093-4c38-af7f-825290db83f2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\4e38dfe4-9876-4faa-8456-53bfca746973.jpg",
+      "PackagePath": "staticwebassets\\Images\\4e38dfe4-9876-4faa-8456-53bfca746973.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\4f5666b2-c28d-4aed-badb-331ea96643ef.jpg",
+      "PackagePath": "staticwebassets\\Images\\4f5666b2-c28d-4aed-badb-331ea96643ef.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\5a9c2b99-bbb7-485c-b717-dfdf15041620.jpg",
+      "PackagePath": "staticwebassets\\Images\\5a9c2b99-bbb7-485c-b717-dfdf15041620.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\5e62e861-58c2-4c65-83a4-1962c90c1520.jpg",
+      "PackagePath": "staticwebassets\\Images\\5e62e861-58c2-4c65-83a4-1962c90c1520.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\5fce45ca-081f-4f6e-9a82-1755c989e29e.jpg",
+      "PackagePath": "staticwebassets\\Images\\5fce45ca-081f-4f6e-9a82-1755c989e29e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\63d00825-9ef1-40af-aad3-d7185219c801.jpg",
+      "PackagePath": "staticwebassets\\Images\\63d00825-9ef1-40af-aad3-d7185219c801.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\8c579c3a-604e-4b21-b040-db4061b6dc27.jpg",
+      "PackagePath": "staticwebassets\\Images\\8c579c3a-604e-4b21-b040-db4061b6dc27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\8e2bb036-d3f2-4b3d-ba06-09778b52aad7.jpg",
+      "PackagePath": "staticwebassets\\Images\\8e2bb036-d3f2-4b3d-ba06-09778b52aad7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\8f3d9343-8489-46d0-bca4-f67ad93f613e.jpg",
+      "PackagePath": "staticwebassets\\Images\\8f3d9343-8489-46d0-bca4-f67ad93f613e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\921c9d0e-5d1a-4646-9242-3fed0e002148.jpg",
+      "PackagePath": "staticwebassets\\Images\\921c9d0e-5d1a-4646-9242-3fed0e002148.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\99554818-60a8-40d7-b152-1b8b9c48fb18.jpg",
+      "PackagePath": "staticwebassets\\Images\\99554818-60a8-40d7-b152-1b8b9c48fb18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\9feb7183-08d7-496f-87ff-66e529848a0b.jpg",
+      "PackagePath": "staticwebassets\\Images\\9feb7183-08d7-496f-87ff-66e529848a0b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\b5e2828d-7f8b-4fd0-a898-7c0ae8be96cb.jpg",
+      "PackagePath": "staticwebassets\\Images\\b5e2828d-7f8b-4fd0-a898-7c0ae8be96cb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\c812a5e4-1f2d-4e8f-ae29-8f9e92e79a53.jpg",
+      "PackagePath": "staticwebassets\\Images\\c812a5e4-1f2d-4e8f-ae29-8f9e92e79a53.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\c8e79346-d318-4db5-95d2-b1f6e59e595b.jpg",
+      "PackagePath": "staticwebassets\\Images\\c8e79346-d318-4db5-95d2-b1f6e59e595b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\e10a80d2-3308-41be-9522-75592dfde8f4.jpg",
+      "PackagePath": "staticwebassets\\Images\\e10a80d2-3308-41be-9522-75592dfde8f4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\e483b03e-70d8-495f-b826-4fba6e2440bb.jpg",
+      "PackagePath": "staticwebassets\\Images\\e483b03e-70d8-495f-b826-4fba6e2440bb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Images\\e6544b65-9f6a-431c-9e72-457fa0137d09.jpg",
+      "PackagePath": "staticwebassets\\Images\\e6544b65-9f6a-431c-9e72-457fa0137d09.jpg"
+    },
+    {
       "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\Nen.avif",
       "PackagePath": "staticwebassets\\Nen.avif"
     },
@@ -313,8 +457,8 @@
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
-      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\SignUpp.css",
-      "PackagePath": "staticwebassets\\css\\SignUpp.css"
+      "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\SignUp.css",
+      "PackagePath": "staticwebassets\\css\\SignUp.css"
     },
     {
       "Id": "C:\\Users\\hp\\source\\repos\\EntityFrameworkCoreCRUD\\wwwroot\\css\\bootstrap.min.css",

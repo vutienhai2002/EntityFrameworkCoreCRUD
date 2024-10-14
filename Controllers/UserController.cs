@@ -24,13 +24,10 @@ namespace EntityFrameworkCoreCRUD.Controllers
 			User u = _userService.CheckUsernamePassword(username, password);
             Buyer b = _buyerService.CheckUsernamePassword(username, password);
 
-
             if (u != null)
             {
                 HttpContext.Session.SetString("Username", u.username);
                 HttpContext.Session.SetInt32("UserId", u.userId);
-
-
 
                 return RedirectToAction("Index", "Car");
             }
@@ -38,20 +35,31 @@ namespace EntityFrameworkCoreCRUD.Controllers
             {
                 HttpContext.Session.SetString("Username", b.Username);
                 HttpContext.Session.SetInt32("UserId", b.BuyerId);
+                HttpContext.Session.SetString("Name", b.Name);
+                HttpContext.Session.SetString("Address", b.Address);
+                HttpContext.Session.SetString("Phone", b.Phone);
+                HttpContext.Session.SetString("Email", b.Email);
 
-                return RedirectToAction("BuyCar", "BuyCar");
+
+
+
+                return RedirectToAction("Index", "Home");
 
             }
-
-
             else
             {
-                // Invalid credentials, display error message
-                ModelState.AddModelError(string.Empty, "Invalid username or password.");
+                ModelState.AddModelError(string.Empty, "Account or password is incorrect");
                 return View("Login");
             }
 		}
-		public IActionResult Signupp()
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear(); // Xóa hết các session
+
+            return RedirectToAction("Login", "User"); // Chuyển hướng đến trang đăng nhập (hoặc trang chính của bạn)
+        }
+
+        public IActionResult Signupp()
 		{
 			return View();
 		}
@@ -59,15 +67,16 @@ namespace EntityFrameworkCoreCRUD.Controllers
         {
             if (user.password != checkpassword)
             {	
-                ModelState.AddModelError(string.Empty, "Mật khẩu và xác nhận mật khẩu không khớp");
+                ModelState.AddModelError(string.Empty, "Password and confirm password do not match");
                 return View("Signupp");
             }
 
             if (_userService.IsUsernameTaken(user.username))
             {
-                ModelState.AddModelError(string.Empty, "Tên đăng nhập đã tồn tại");
+                ModelState.AddModelError(string.Empty, "Username available");
                 return View("Signupp");
             }
+
 			user.role = "admin";
             _userService.AddUser(user);
             return RedirectToAction("Login", "User");

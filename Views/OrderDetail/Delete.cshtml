@@ -1,5 +1,8 @@
-﻿@using EntityFrameworkCoreCRUD.Models
-@model List<Transaction>
+﻿@model EntityFrameworkCoreCRUD.Models.OrderDetail
+
+@{
+    ViewData["Title"] = "Delete OrderDetail";
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +13,7 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Paper Dashboard 2 by Creative Tim
+        @ViewData["Title"]
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -23,9 +26,7 @@
     <link href="../assets/demo/demo.css" rel="stylesheet" />
     <link href="~/css/paper-dashboard.css" rel="stylesheet" />
     <link href="~/css/paper-dashboard.min.css" rel="stylesheet" />
-    <a href="~/css/paper-dashboard.css.map">~/css/paper-dashboard.css.map</a>
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-    <a href="~/css/bootstrap.min.css.map"></a>
     <link href="~/css/demo.css" rel="stylesheet" />
 </head>
 
@@ -33,42 +34,40 @@
     <div class="wrapper ">
         <div class="sidebar" data-color="white" data-active-color="danger">
             <div class="logo">
-                <a class="simple-text logo-mini">
+                <a href="https://www.creative-tim.com" class="simple-text logo-mini">
                     <div class="logo-image-small">
                     </div>
                     <img src="~/image/logo.png" />
                 </a>
                 <a class="simple-text logo-normal">
-                    CITIZENS
-
+                    CITYZENS
                 </a>
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-
-                    <li class="active ">
+                    <li>
                         <a href="/car/index">
                             <h6>Car</h6>
                         </a>
                     </li>
-                    @*  <li class="active ">
-                    <a href="/Employee/index">
-                    <h6>Employee</h6>
-                    </a>
-                    </li> *@
-                    <li class="active ">
+                    <li>
                         <a href="/Buyer/index">
                             <h6>Buyer</h6>
                         </a>
                     </li>
-                    <li class="active ">
+                    <li>
                         <a href="/Seller/index">
                             <h6>Seller</h6>
                         </a>
                     </li>
-                    <li class="active ">
-                        <a href="/Transaction/index">
-                            <h6>Transaction </h6>
+                    <li>
+                        <a href="/Contact/index">
+                            <h6>Contact</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/OrderDetail/index">
+                            <h6>OrderDetail</h6>
                         </a>
                     </li>
                 </ul>
@@ -86,7 +85,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="javascript:;">Dashboard </a>
+                        <a class="navbar-brand" href="javascript:;"> Dashboard </a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -97,10 +96,8 @@
                         <form>
                             <div class="input-group no-border">
                                 <input type="text" value="" class="form-control" placeholder="Search...">
-
                             </div>
                         </form>
-
                         <ul class="navbar-nav">
                             <li>
                                 @if (ViewBag.Username != null)
@@ -124,53 +121,58 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title"> Transactions</h4>
-                                <a href="/Transaction/Create" class="btn btn-primary ">Add</a>
-
-                            </div>
                             <div class="card-body">
-                                <div class="table-responsive">
+                                <h1>Delete OrderDetail</h1>
 
-                                    <body>
-                                        
-                                            <table class="table table-bordered table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Transaction ID</th>
-                                                        <th>Car</th>
-                                                        <th>Seller</th>
-                                                        <th>Buyer</th>
-                                                        <th>Transaction Date</th>
-                                                        <th>Payment Method</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @foreach (var transaction in Model)
-                                                    {
-                                                        <tr>
-                                                            <td>@transaction.TransactionId</td>
-                                                            <td>@transaction.Car.Model</td>
-                                                            <td>@transaction.Seller.Name</td>
-                                                            <td>@transaction.Buyer.Name</td>
-                                                            <td>@transaction.TransactionDate.ToString("yyyy-MM-dd")</td>
-                                                            <td>@transaction.PaymentMethod</td>
-                                                        </tr>
-                                                    }
-                                                </tbody>
-                                            </table>
-                                        
-                                      
-                                    </body>
-                                    </table>
+                                <h3>Are you sure you want to delete this item?</h3>
+                                <div>
+                                    <h4>OrderDetail</h4>
+                                    <dl class="row">
+                                        <dt class="col-sm-2">
+                                            OrderDetailID
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Model.OrderDetailId
+                                        </dd>
+                                        <dt class="col-sm-2">
+                                            OrderID
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Model.OrderId
+                                        </dd>
+                                        <dt class="col-sm-2">
+                                            CarID
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Model.CarId
+                                        </dd>
+                                        <dt class="col-sm-2">
+                                            Quantity
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Model.Quantity
+                                        </dd>
+                                        <dt class="col-sm-2">
+                                            Price
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Model.Price
+                                        </dd>
+                                    </dl>
+
+                                    <form asp-action="DeleteConfirmed">
+                                        <input type="hidden" asp-for="OrderDetailId" />
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <footer class="footer footer-black  footer-white ">
+            <!-- Footer -->
+            <footer class="footer footer-black footer-white">
                 <div class="container-fluid">
                     <div class="row">
                         <nav class="footer-nav">
@@ -184,12 +186,13 @@
                             <span class="copyright">
                                 © <script>
                                       document.write(new Date().getFullYear())
-                                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                                </script>, made with <i class="fa fa-heart heart"></i> by CITIZENS
                             </span>
                         </div>
                     </div>
                 </div>
             </footer>
+            <!-- End Footer -->
         </div>
     </div>
     <!--   Core JS Files   -->
@@ -204,11 +207,9 @@
     <!--  Notifications Plugin    -->
     <script src="../assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+    <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+    <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
     <script src="../assets/demo/demo.js"></script>
 </body>
 
 </html>
-
-
-

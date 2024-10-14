@@ -14,18 +14,21 @@ namespace EntityFrameworkCoreCRUD.Service
         }
 
 
-        public bool IsUsernameTaken(string username)
-        {
-            return _context.Buyers.Any(u => u.Username == username);
-        }   
         public bool IsUsernameExists(string username)
         {
             return _context.Buyers.Any(b => b.Username == username);
         }
+
         public bool IsEmailExists(string email)
         {
             return _context.Buyers.Any(b => b.Email == email);
         }
+
+        public bool IsPhoneExists(string phone)
+        {
+            return _context.Buyers.Any(b => b.Phone == phone);
+        }
+
         public void AddBuyer(Buyer buyer)
         {
             _context.Buyers.Add(buyer);
@@ -46,11 +49,19 @@ namespace EntityFrameworkCoreCRUD.Service
         {
             return _context.Buyers.FirstOrDefault(b => b.BuyerId == id);
         }
+        public Buyer GetBuyerByIdSS(int id)
+        {
+            return _context.Buyers.Find(id);
+        }
 
         public interface IBuyerService
         {
             Buyer GetBuyerById(int id);
             // Other method definitions
+        }
+        public Buyer GetBuyerByUsername(string username)
+        {
+            return _context.Buyers.FirstOrDefault(b => b.Username == username);
         }
         public Buyer CheckUsernamePassword(string username, string password)
         {

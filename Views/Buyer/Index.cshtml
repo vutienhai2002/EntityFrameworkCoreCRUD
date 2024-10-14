@@ -47,6 +47,11 @@
                 <ul class="nav">
 
                     <li class="active ">
+                        <a href="/Dashboard/index">
+                            <h6>Dashboard</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
                         <a href="/car/index">
                             <h6>Car</h6>
                         </a>
@@ -72,8 +77,8 @@
                         </a>
                     </li>
                     <li class="active ">
-                        <a href="/Transaction/index">
-                            <h6>Transaction </h6>
+                        <a href="/OrderDetail/index">
+                            <h6>OrderDetail</h6>
                         </a>
                     </li>
                 </ul>
@@ -130,12 +135,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title"> Buyer</h4>
-                                <a href="/Buyer/Create" class="btn btn-primary ">Add</a>
-
                             </div>
                             @if (TempData["ResultOk"] != null) // Kiểm tra TempData có thông báo không
                             {
-                                <div class="alert alert-success" role="alert">
+                                <div class="alert alert-success" role="alert" style="margin-left:1100px">
                                     @TempData["ResultOk"]
                                 </div>
                             }
@@ -146,21 +149,29 @@
                                         <table class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>
+                                                    <th>Numerical order</th>
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Address </th>
                                                     <th scope="col">Phone </th>
                                                     <th scope="col">Email </th>
                                                     <th scope="col">Username </th>
-                                                    <th scope="col">Passsword </th>
-
-                                                    <th></th>
+@*                                                     <th scope="col">Passsword </th>
+ *@
+                                                   @*  <th>
+                                                        <a href="/Buyer/Create" class="btn btn-warning ">Add Buyer</a>
+                                                    </th> *@
                                                 </tr>
                                             </thead>
                                             <tbody>
-
+                                                @{
+                                                    int counter = 1;
+                                                }
                                                 @foreach (var item in Model)
                                                 {
                                                     <tr>
+                                                        <td>
+                                                            @counter
+                                                        </td>
                                                         <td width="20%">
                                                             @item.Name
                                                         </td>
@@ -176,7 +187,7 @@
                                                         <td width="20%">
                                                             @item.Username
                                                         </td>
-                                                        <td width="20%">
+                                                       @*  <td width="20%">
                                                             @item.Password
                                                         </td>
                                                         <td>
@@ -184,15 +195,36 @@
                                                                 <a href="/Buyer/Edit/@item.BuyerId " class=" btn btn-sm btn-primary"><i class="bi bi-pencil-square"></i>Edit</a>&nbsp;
                                                                 <a href="/Buyer/DeleteBuyer/@item.BuyerId " class="btn btn-sm btn-danger"><i class="bi bi-trash-fill"></i>Delete</a>
                                                             </div>
-                                                        </td>
+                                                        </td> *@
                                                     </tr>
+                                                    counter++;
+
                                                 }
                                             </tbody>
                                         </table>
                                     </tbody>
                                     </table>
                                 </div>
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="page-item active">
+                                            <a class="page-link" href="/Buyer/Index?page=1">1</a>
+                                        </li>
+                                        <li class="page-item ">
+                                            <a class="page-link" href="/Buyer/Index?page=2">2</a>
+                                        </li>
+                                        <li class="page-item ">
+                                            <a class="page-link" href="/Buyer/Index?page=3">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="/Buyer/Index?page=2" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>  
                             </div>
+                          
                         </div>
                     </div>
 

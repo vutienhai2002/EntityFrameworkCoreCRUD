@@ -47,6 +47,11 @@
                 <ul class="nav">
 
                     <li class="active ">
+                        <a href="/Dashboard/index">
+                            <h6>Dashboard</h6>
+                        </a>
+                    </li>
+                    <li class="active ">
                         <a href="/car/index">
                             <h6>Car</h6>
                         </a>
@@ -69,8 +74,8 @@
                         </a>
                     </li>
                     <li class="active ">
-                        <a href="/Transaction/index">
-                            <h6>Transaction </h6>
+                        <a href="/OrderDetail/index">
+                            <h6>OrderDetail</h6>
                         </a>
                     </li>
                 </ul>
@@ -140,7 +145,7 @@
                                                     <div class="card-body">
                                                         <form action="/Contact/EditContact" method="post">
                                                             <div asp-validation-summary="All"></div>
-                                                            <input type="hidden" class="form-control mb-3" name=BuyerId" value="@Model.BuyerId ">
+                                                            <input type="hidden" class="form-control mb-3" name=ContactId" value="@Model.ContactId ">
 
                                                             <div class="form-group">
                                                                 <label asp-for="Name">Contact ID</label>
@@ -163,12 +168,8 @@
 
                                                                 <span asp-validation-for="Date" class="text-danger"></span>
                                                             </div>
-                 
-
-
-
-                                                            <button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Save</button>
-                                                            <a asp-controller="Seller" asp-action="Index" class="btn btn-lg btn-warning p-2">Back To List</a>
+                                                            <button type="submit" class="btn btn-lg btn-primary p-1"><i class="bi bi-file-plus-fill"></i>Save</button>
+                                                            <a asp-controller="Seller" asp-action="Index" class="btn btn-lg btn-warning p-1">Back To List</a>
                                                         </form>
                                                     </div>
                                                 </div>
